@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spend Analyzer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root{
+  --ttm-blue:#1d4a9e; --ttm-blue-bright:#2b60be; --ttm-green:#18663f;
+  --ttm-steel:#6b7380; --surface:#f4f5f7; --text:#4a5260; --ink:#1a1f28; --logo-tile:#ffffff;
+  --on-fill:#ffffff; --ring:rgba(29,74,158,.14);
+  --font-mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;
+  --font-sans:system-ui,sans-serif;
+  --logo-light:block; --logo-dark:none;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ color-scheme:dark;
+    --ttm-steel:#98a0ac; --surface:#07090d; --text:#98a0ac; --ink:#e6e9ee; --logo-tile:#0f141c;
+    --ring:rgba(43,96,190,.28); --logo-light:none; --logo-dark:block; }
+}
+:root[data-theme="dark"]{ color-scheme:dark;
+  --ttm-steel:#98a0ac; --surface:#07090d; --text:#98a0ac; --ink:#e6e9ee; --logo-tile:#0f141c;
+  --ring:rgba(43,96,190,.28); --logo-light:none; --logo-dark:block; }
+html,body{background:var(--surface);}
+body{margin:0;color:var(--text);font-family:var(--font-sans);font-size:16px;line-height:1.5;padding-inline:16px;}
+.wrap{max-width:960px;margin:0 auto;padding-block:48px 64px;display:flex;flex-direction:column;align-items:center;gap:48px;}
+header{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
+.logo{width:112px;height:112px;}
+.logo .l{display:var(--logo-light);width:100%;height:100%;}
+.logo .d{display:var(--logo-dark);width:100%;height:100%;}
+h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.02em;text-wrap:balance;}
+.sub{margin:0;max-width:52ch;font-size:clamp(15px,2.2vw,18px);text-wrap:balance;}
+.sub b{font-family:var(--font-mono);font-weight:500;color:var(--ttm-green);letter-spacing:.06em;}
+:root[data-theme="dark"] .sub b{color:var(--ink);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sub b{color:var(--ink);}}
+.rates{width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.bubbles{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;justify-content:center;gap:clamp(10px,4vw,48px);width:100%;}
+.bubble{flex:0 1 200px;aspect-ratio:1;max-width:200px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  color:var(--on-fill);box-shadow:0 0 0 clamp(4px,1vw,8px) var(--ring);text-align:center;padding:8px;}
+.spend{background:var(--ttm-blue);} .invest{background:var(--ttm-green);} .save{background:var(--ttm-blue-bright);}
+.val{font-family:var(--font-mono);font-weight:700;font-size:clamp(22px,6vw,44px);line-height:1;font-variant-numeric:tabular-nums;}
+.val small{font-size:.55em;font-weight:500;margin-left:1px;}
+.lbl{font-size:clamp(10px,2.2vw,13px);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.2;}
+.note{margin:0;font-size:13px;color:var(--text);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" role="img" aria-label="TTM Tech">
+      <img class="l" src="assets/ttm-tech-logo-light.svg" alt="" width="112" height="112">
+      <img class="d" src="assets/ttm-tech-logo-dark.svg" alt="" width="112" height="112">
+    </div>
+    <h1>Spend Analyzer</h1>
+    <p class="sub"><b>Know Your Money (KYM)</b> through your spends, investments and savings.</p>
+  </header>
+  <section class="rates" aria-label="Rates">
+    <ul class="bubbles">
+      <li class="bubble spend"><span class="val">58<small>%</small></span><span class="lbl">Spend Rate</span></li>
+      <li class="bubble invest"><span class="val">24<small>%</small></span><span class="lbl">Investment Rate</span></li>
+      <li class="bubble save"><span class="val">18<small>%</small></span><span class="lbl">Savings Rate</span></li>
+    </ul>
+    <p class="note">Sample figures · 58% + 24% + 18% = 100%</p>
+  </section>
+</div>
+</body>
+</html>
