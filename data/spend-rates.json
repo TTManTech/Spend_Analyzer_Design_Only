@@ -4,149 +4,4334 @@
     "2019-11": {
       "spend": 1221.62,
       "income": 0.0,
-      "spendRate": null
+      "spendRate": null,
+      "categories": [
+        {
+          "name": "Merchandise / Clothing",
+          "total": 1020.08,
+          "share": 83.5,
+          "top": [
+            {
+              "desc": "HP *HP.COM STORE 888-345-5409 CA",
+              "date": "2019-11-29",
+              "amount": 850.97,
+              "share": 83.4
+            },
+            {
+              "desc": "AMZN Mktp US*2Q7UX1JW3 Amzn.com/bill WA",
+              "date": "2019-11-24",
+              "amount": 63.74,
+              "share": 6.2
+            },
+            {
+              "desc": "GAMESTOP #7730 NILES IL",
+              "date": "2019-11-28",
+              "amount": 27.54,
+              "share": 2.7
+            },
+            {
+              "desc": "ROSS STORES #1567 MT PROSPECT IL",
+              "date": "2019-11-30",
+              "amount": 21.98,
+              "share": 2.2
+            },
+            {
+              "desc": "AMZN Mktp US*ZJ7G84CG3 Amzn.com/bill WA",
+              "date": "2019-11-29",
+              "amount": 18.98,
+              "share": 1.9
+            },
+            {
+              "desc": "AMZN Mktp US*LV50Z88Y3 Amzn.com/bill WA",
+              "date": "2019-11-25",
+              "amount": 9.99,
+              "share": 1.0
+            },
+            {
+              "desc": "AMZN Mktp US*398HK68G3 Amzn.com/bill WA",
+              "date": "2019-11-24",
+              "amount": 8.49,
+              "share": 0.8
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 151.53,
+          "share": 12.4,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2019-11-30",
+              "amount": 91.41,
+              "share": 60.3
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2019-11-28",
+              "amount": 49.61,
+              "share": 32.7
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2019-11-23",
+              "amount": 5.82,
+              "share": 3.8
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2019-11-25",
+              "amount": 4.69,
+              "share": 3.1
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 36.4,
+          "share": 3.0,
+          "top": [
+            {
+              "desc": "SPEEDWAY 07649 923 N MILW BUFFALO GROVE IL",
+              "date": "2019-11-27",
+              "amount": 25.34,
+              "share": 69.6
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2019-11-23",
+              "amount": 8.9,
+              "share": 24.5
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2019-11-23",
+              "amount": 2.16,
+              "share": 5.9
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 13.61,
+          "share": 1.1,
+          "top": [
+            {
+              "desc": "WENDYS #1172 GLENVIEW IL",
+              "date": "2019-11-27",
+              "amount": 8.33,
+              "share": 61.2
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-11-25",
+              "amount": 2.87,
+              "share": 21.1
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-11-27",
+              "amount": 1.29,
+              "share": 9.5
+            },
+            {
+              "desc": "MARKET@WORK 2067379149 RENTON WA",
+              "date": "2019-11-27",
+              "amount": 0.7,
+              "share": 5.1
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-11-25",
+              "amount": 0.42,
+              "share": 3.1
+            }
+          ]
+        }
+      ]
     },
     "2019-12": {
       "spend": 685.24,
       "income": 0.0,
-      "spendRate": null
+      "spendRate": null,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 165.19,
+          "share": 24.1,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2019-12-01",
+              "amount": 142.99,
+              "share": 86.6
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2019-12-10",
+              "amount": 22.2,
+              "share": 13.4
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 161.87,
+          "share": 23.6,
+          "top": [
+            {
+              "desc": "BIG BOWL LINCOLNSHIRE LINCOLNSHIRE IL",
+              "date": "2019-12-12",
+              "amount": 150.0,
+              "share": 92.7
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2019-12-20",
+              "amount": 8.57,
+              "share": 5.3
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-12-13",
+              "amount": 3.3,
+              "share": 2.0
+            }
+          ]
+        },
+        {
+          "name": "Travel & Hospitality",
+          "total": 131.4,
+          "share": 19.2,
+          "top": [
+            {
+              "desc": "IL TOLLWAY-WEB DOWNERS GROVE IL",
+              "date": "2019-12-10",
+              "amount": 131.4,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 131.24,
+          "share": 19.2,
+          "top": [
+            {
+              "desc": "FIVE BELOW 722 NILES IL",
+              "date": "2019-12-09",
+              "amount": 91.27,
+              "share": 69.5
+            },
+            {
+              "desc": "AMZN Mktp US*A78DD8PB3 Amzn.com/bill WA",
+              "date": "2019-12-04",
+              "amount": 23.78,
+              "share": 18.1
+            },
+            {
+              "desc": "AMZN Mktp US*6R6OK0NM3 Amzn.com/bill WA",
+              "date": "2019-12-09",
+              "amount": 10.95,
+              "share": 8.3
+            },
+            {
+              "desc": "AMZN Mktp US*EY0X696T3 Amzn.com/bill WA",
+              "date": "2019-12-07",
+              "amount": 5.24,
+              "share": 4.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 50.12,
+          "share": 7.3,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0779 MOUNT PROSPEC IL",
+              "date": "2019-12-14",
+              "amount": 33.83,
+              "share": 67.5
+            },
+            {
+              "desc": "SPEEDWAY 04248 DEERFIELD DEERFIELD IL",
+              "date": "2019-12-12",
+              "amount": 8.44,
+              "share": 16.8
+            },
+            {
+              "desc": "SHELL OIL 57444177208 NILES IL",
+              "date": "2019-12-12",
+              "amount": 7.85,
+              "share": 15.7
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 35.55,
+          "share": 5.2,
+          "top": [
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 018 NILES IL",
+              "date": "2019-12-17",
+              "amount": 35.55,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 9.87,
+          "share": 1.4,
+          "top": [
+            {
+              "desc": "ATOM TICKETS LLC 844-838-6284 CA",
+              "date": "2019-12-14",
+              "amount": 9.87,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2020-01": {
       "spend": 152.07,
       "income": 5000.0,
-      "spendRate": 3
+      "spendRate": 3,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 52.73,
+          "share": 34.7,
+          "top": [
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2020-01-23",
+              "amount": 22.01,
+              "share": 41.7
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2020-01-21",
+              "amount": 12.11,
+              "share": 23.0
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2020-01-21",
+              "amount": 5.38,
+              "share": 10.2
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2020-01-29",
+              "amount": 4.4,
+              "share": 8.3
+            },
+            {
+              "desc": "KAIRALI FOODS OF GLENVIE GLENVIEW IL",
+              "date": "2020-01-24",
+              "amount": 4.08,
+              "share": 7.7
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2020-01-21",
+              "amount": 3.1,
+              "share": 5.9
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2020-01-27",
+              "amount": 1.65,
+              "share": 3.1
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 46.94,
+          "share": 30.9,
+          "top": [
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2020-01-16",
+              "amount": 8.79,
+              "share": 18.7
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-01-29",
+              "amount": 8.36,
+              "share": 17.8
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-01-24",
+              "amount": 3.79,
+              "share": 8.1
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-01-28",
+              "amount": 3.79,
+              "share": 8.1
+            },
+            {
+              "desc": "DUNKIN #349715 Q35 DES PLAINES IL",
+              "date": "2020-01-30",
+              "amount": 2.33,
+              "share": 5.0
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-01-16",
+              "amount": 2.31,
+              "share": 4.9
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-01-22",
+              "amount": 2.31,
+              "share": 4.9
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 32.29,
+          "share": 21.2,
+          "top": [
+            {
+              "desc": "SPEEDWAY 07649 923 N MILW BUFFALO GROVE IL",
+              "date": "2020-01-24",
+              "amount": 21.0,
+              "share": 65.0
+            },
+            {
+              "desc": "EXXONMOBIL 97603310 DES PLAINES IL",
+              "date": "2020-01-16",
+              "amount": 11.29,
+              "share": 35.0
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "total": 20.11,
+          "share": 13.2,
+          "top": [
+            {
+              "desc": "WALGREENS #5711 DES PLAINES IL",
+              "date": "2020-01-21",
+              "amount": 14.62,
+              "share": 72.7
+            },
+            {
+              "desc": "WALGREENS #5711 DES PLAINES IL",
+              "date": "2020-01-21",
+              "amount": 5.49,
+              "share": 27.3
+            }
+          ]
+        }
+      ]
     },
     "2020-02": {
       "spend": 1821.53,
       "income": 2500.0,
-      "spendRate": 73
+      "spendRate": 73,
+      "categories": [
+        {
+          "name": "Other",
+          "total": 1636.37,
+          "share": 89.8,
+          "top": [
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2020-02-04",
+              "amount": 1636.37,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 72.4,
+          "share": 4.0,
+          "top": [
+            {
+              "desc": "SPEEDWAY 07649 923 N MILW BUFFALO GROVE IL",
+              "date": "2020-02-24",
+              "amount": 43.03,
+              "share": 59.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-02-11",
+              "amount": 16.39,
+              "share": 22.6
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-02-06",
+              "amount": 10.81,
+              "share": 14.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-02-06",
+              "amount": 2.17,
+              "share": 3.0
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 71.83,
+          "share": 3.9,
+          "top": [
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-02-24",
+              "amount": 9.09,
+              "share": 12.7
+            },
+            {
+              "desc": "TACO BELL 036200 DES PLAINES IL",
+              "date": "2020-02-24",
+              "amount": 9.09,
+              "share": 12.7
+            },
+            {
+              "desc": "WENDYS #0996 DES PLAINES IL",
+              "date": "2020-02-06",
+              "amount": 8.75,
+              "share": 12.2
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-02-07",
+              "amount": 7.97,
+              "share": 11.1
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-02-04",
+              "amount": 7.55,
+              "share": 10.5
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2020-02-06",
+              "amount": 7.12,
+              "share": 9.9
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2020-02-27",
+              "amount": 6.32,
+              "share": 8.8
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 40.93,
+          "share": 2.2,
+          "top": [
+            {
+              "desc": "KOHL'S #0070 NILES IL",
+              "date": "2020-02-08",
+              "amount": 26.45,
+              "share": 64.6
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2020-02-26",
+              "amount": 8.98,
+              "share": 21.9
+            },
+            {
+              "desc": "HALF PRICE BOOKS #087 NILES IL",
+              "date": "2020-02-08",
+              "amount": 5.5,
+              "share": 13.4
+            }
+          ]
+        }
+      ]
     },
     "2020-03": {
       "spend": 482.29,
       "income": 5000.0,
-      "spendRate": 10
+      "spendRate": 10,
+      "categories": [
+        {
+          "name": "Other",
+          "total": 350.0,
+          "share": 72.6,
+          "top": [
+            {
+              "desc": "MILAAP USA WWW.MILAAP.OR TX",
+              "date": "2020-03-03",
+              "amount": 350.0,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 65.21,
+          "share": 13.5,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-03-04",
+              "amount": 56.88,
+              "share": 87.2
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-03-04",
+              "amount": 4.37,
+              "share": 6.7
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2020-03-01",
+              "amount": 2.58,
+              "share": 4.0
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2020-03-01",
+              "amount": 1.38,
+              "share": 2.1
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 42.22,
+          "share": 8.8,
+          "top": [
+            {
+              "desc": "HOOTERS #17 SCHAUMBURG IL",
+              "date": "2020-03-13",
+              "amount": 42.22,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 15.1,
+          "share": 3.1,
+          "top": [
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2020-03-01",
+              "amount": 13.71,
+              "share": 90.8
+            },
+            {
+              "desc": "MARKET@WORK 2067379149 RENTON WA",
+              "date": "2020-03-06",
+              "amount": 1.39,
+              "share": 9.2
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 9.76,
+          "share": 2.0,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-03-21",
+              "amount": 9.76,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2020-04": {
       "spend": 0.0,
       "income": 5000.0,
-      "spendRate": 0
+      "spendRate": 0,
+      "categories": []
     },
     "2020-05": {
       "spend": 0.0,
       "income": 5000.0,
-      "spendRate": 0
+      "spendRate": 0,
+      "categories": []
     },
     "2020-06": {
       "spend": 40.83,
       "income": 5000.0,
-      "spendRate": 1
+      "spendRate": 1,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 40.83,
+          "share": 100.0,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-06-19",
+              "amount": 40.83,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2020-07": {
       "spend": 98.23,
       "income": 5000.0,
-      "spendRate": 2
+      "spendRate": 2,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 98.23,
+          "share": 100.0,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-07-22",
+              "amount": 98.23,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2020-08": {
       "spend": 18.5,
       "income": 5000.0,
-      "spendRate": 0
+      "spendRate": 0,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 9.71,
+          "share": 52.5,
+          "top": [
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2020-08-01",
+              "amount": 9.71,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 8.79,
+          "share": 47.5,
+          "top": [
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2020-08-07",
+              "amount": 8.79,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2020-09": {
       "spend": 277.33,
       "income": 5000.0,
-      "spendRate": 6
+      "spendRate": 6,
+      "categories": [
+        {
+          "name": "Merchandise / Clothing",
+          "total": 198.98,
+          "share": 71.7,
+          "top": [
+            {
+              "desc": "OLD NAVY US 3070 NILES IL",
+              "date": "2020-09-17",
+              "amount": 150.55,
+              "share": 75.7
+            },
+            {
+              "desc": "BURLINGTON STORES 162 GLENVIEW IL",
+              "date": "2020-09-18",
+              "amount": 27.24,
+              "share": 13.7
+            },
+            {
+              "desc": "BOYNE MOUNTAIN RETAIL BOYNE FALLS MI",
+              "date": "2020-09-19",
+              "amount": 21.19,
+              "share": 10.6
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 43.94,
+          "share": 15.8,
+          "top": [
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2020-09-25",
+              "amount": 32.79,
+              "share": 74.6
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2020-09-18",
+              "amount": 11.15,
+              "share": 25.4
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 25.92,
+          "share": 9.3,
+          "top": [
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2020-09-22",
+              "amount": 8.98,
+              "share": 34.6
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2020-09-29",
+              "amount": 8.98,
+              "share": 34.6
+            },
+            {
+              "desc": "SUBWAY 00312116 DES PLAINES IL",
+              "date": "2020-09-27",
+              "amount": 7.96,
+              "share": 30.7
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 8.49,
+          "share": 3.1,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-09-18",
+              "amount": 3.04,
+              "share": 35.8
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-09-26",
+              "amount": 2.05,
+              "share": 24.1
+            },
+            {
+              "desc": "SHELL OIL 57445800808 WYOMING MI",
+              "date": "2020-09-19",
+              "amount": 1.99,
+              "share": 23.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-09-16",
+              "amount": 1.41,
+              "share": 16.6
+            }
+          ]
+        }
+      ]
     },
     "2020-10": {
       "spend": 1906.99,
       "income": 5000.0,
-      "spendRate": 38
+      "spendRate": 38,
+      "categories": [
+        {
+          "name": "Other",
+          "total": 1506.15,
+          "share": 79.0,
+          "top": [
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2020-10-08",
+              "amount": 1368.37,
+              "share": 90.9
+            },
+            {
+              "desc": "CITY HALL CHICAGO IL",
+              "date": "2020-10-03",
+              "amount": 137.78,
+              "share": 9.1
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 250.68,
+          "share": 13.1,
+          "top": [
+            {
+              "desc": "BAHAMA BREEZES00030296 SCHAUMBURG IL",
+              "date": "2020-10-10",
+              "amount": 168.11,
+              "share": 67.1
+            },
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 003 DES PLAINES IL",
+              "date": "2020-10-31",
+              "amount": 77.66,
+              "share": 31.0
+            },
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 003 DES PLAINES IL",
+              "date": "2020-10-31",
+              "amount": 4.91,
+              "share": 2.0
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 68.43,
+          "share": 3.6,
+          "top": [
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2020-10-17",
+              "amount": 20.4,
+              "share": 29.8
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2020-10-29",
+              "amount": 19.59,
+              "share": 28.6
+            },
+            {
+              "desc": "OBERWEIS DAIRY GLENVIEW IL",
+              "date": "2020-10-11",
+              "amount": 15.34,
+              "share": 22.4
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2020-10-03",
+              "amount": 10.48,
+              "share": 15.3
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2020-10-03",
+              "amount": 2.62,
+              "share": 3.8
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 46.48,
+          "share": 2.4,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-10-27",
+              "amount": 35.65,
+              "share": 76.7
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-10-08",
+              "amount": 4.12,
+              "share": 8.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-10-16",
+              "amount": 3.67,
+              "share": 7.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-10-09",
+              "amount": 3.04,
+              "share": 6.5
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 35.25,
+          "share": 1.8,
+          "top": [
+            {
+              "desc": "BRUNCHCAFENILES NILES IL",
+              "date": "2020-10-17",
+              "amount": 12.0,
+              "share": 34.0
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2020-10-30",
+              "amount": 8.67,
+              "share": 24.6
+            },
+            {
+              "desc": "Subway 31211 Des Plaines IL",
+              "date": "2020-10-17",
+              "amount": 5.23,
+              "share": 14.8
+            },
+            {
+              "desc": "Subway 31211 Des Plaines IL",
+              "date": "2020-10-09",
+              "amount": 4.91,
+              "share": 13.9
+            },
+            {
+              "desc": "PORTILLOS HOT DOGS #20 NILES IL",
+              "date": "2020-10-09",
+              "amount": 4.44,
+              "share": 12.6
+            }
+          ]
+        }
+      ]
     },
     "2020-11": {
       "spend": 2240.7,
       "income": 5000.0,
-      "spendRate": 45
+      "spendRate": 45,
+      "categories": [
+        {
+          "name": "Merchandise / Clothing",
+          "total": 765.14,
+          "share": 34.1,
+          "top": [
+            {
+              "desc": "AMZN Mktp US*F00VW2NB3 Amzn.com/bill WA",
+              "date": "2020-11-28",
+              "amount": 226.9,
+              "share": 29.7
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2020-11-08",
+              "amount": 88.17,
+              "share": 11.5
+            },
+            {
+              "desc": "TARGET 00011767 ARLINGTON HEI IL",
+              "date": "2020-11-20",
+              "amount": 85.65,
+              "share": 11.2
+            },
+            {
+              "desc": "Amazon.com*EI80T2813 Amzn.com/bill WA",
+              "date": "2020-11-23",
+              "amount": 75.9,
+              "share": 9.9
+            },
+            {
+              "desc": "ROSS STORES #1543 NILES IL",
+              "date": "2020-11-15",
+              "amount": 55.08,
+              "share": 7.2
+            },
+            {
+              "desc": "TARGET 00011767 ARLINGTON HEI IL",
+              "date": "2020-11-05",
+              "amount": 45.37,
+              "share": 5.9
+            },
+            {
+              "desc": "Philips.com shop 866-3093263 CT",
+              "date": "2020-11-17",
+              "amount": 40.6,
+              "share": 5.3
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 681.77,
+          "share": 30.4,
+          "top": [
+            {
+              "desc": "XSPORT NILES 877-417-1450 IL",
+              "date": "2020-11-15",
+              "amount": 408.0,
+              "share": 59.8
+            },
+            {
+              "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
+              "date": "2020-11-12",
+              "amount": 143.77,
+              "share": 21.1
+            },
+            {
+              "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
+              "date": "2020-11-07",
+              "amount": 120.0,
+              "share": 17.6
+            },
+            {
+              "desc": "SQ *MORRIS EYECARE ASSOCI Prospect Heig IL",
+              "date": "2020-11-20",
+              "amount": 10.0,
+              "share": 1.5
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 654.08,
+          "share": 29.2,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-11-28",
+              "amount": 262.27,
+              "share": 40.1
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-11-25",
+              "amount": 120.0,
+              "share": 18.3
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2020-11-08",
+              "amount": 116.12,
+              "share": 17.8
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-11-10",
+              "amount": 45.95,
+              "share": 7.0
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2020-11-25",
+              "amount": 33.31,
+              "share": 5.1
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2020-11-18",
+              "amount": 23.43,
+              "share": 3.6
+            },
+            {
+              "desc": "WHOLEFDS NBK 10244 NORTHBROOK IL",
+              "date": "2020-11-01",
+              "amount": 20.45,
+              "share": 3.1
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 126.99,
+          "share": 5.7,
+          "top": [
+            {
+              "desc": "TST* SABRI NIHARI RESTAUR CHICAGO IL",
+              "date": "2020-11-21",
+              "amount": 102.36,
+              "share": 80.6
+            },
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2020-11-01",
+              "amount": 16.68,
+              "share": 13.1
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2020-11-04",
+              "amount": 7.95,
+              "share": 6.3
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 12.72,
+          "share": 0.6,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-11-30",
+              "amount": 6.85,
+              "share": 53.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-11-29",
+              "amount": 4.12,
+              "share": 32.4
+            },
+            {
+              "desc": "USA*VEND AT AIR SERV DEERFIELD IL",
+              "date": "2020-11-01",
+              "amount": 1.75,
+              "share": 13.8
+            }
+          ]
+        }
+      ]
     },
     "2020-12": {
       "spend": 496.44,
       "income": 5000.0,
-      "spendRate": 10
+      "spendRate": 10,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 184.23,
+          "share": 37.1,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-12-07",
+              "amount": 62.64,
+              "share": 34.0
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2020-12-19",
+              "amount": 44.9,
+              "share": 24.4
+            },
+            {
+              "desc": "CHICAGO LIVE POULTRY CHICAGO IL",
+              "date": "2020-12-23",
+              "amount": 18.0,
+              "share": 9.8
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2020-12-24",
+              "amount": 17.96,
+              "share": 9.7
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2020-12-27",
+              "amount": 14.23,
+              "share": 7.7
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2020-12-24",
+              "amount": 10.2,
+              "share": 5.5
+            },
+            {
+              "desc": "HONEST NILES NILES IL",
+              "date": "2020-12-05",
+              "amount": 8.1,
+              "share": 4.4
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 182.07,
+          "share": 36.7,
+          "top": [
+            {
+              "desc": "Amazon.com*0A0AQ5S13 Amzn.com/bill WA",
+              "date": "2020-12-03",
+              "amount": 127.49,
+              "share": 70.0
+            },
+            {
+              "desc": "AMZN Mktp US*6Y3YI0Z73 Amzn.com/bill WA",
+              "date": "2020-12-01",
+              "amount": 20.2,
+              "share": 11.1
+            },
+            {
+              "desc": "Amazon.com*BH3O35973 Amzn.com/bill WA",
+              "date": "2020-12-02",
+              "amount": 19.11,
+              "share": 10.5
+            },
+            {
+              "desc": "BURLINGTON STORES 162 GLENVIEW IL",
+              "date": "2020-12-21",
+              "amount": 11.97,
+              "share": 6.6
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2020-12-27",
+              "amount": 3.3,
+              "share": 1.8
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 52.8,
+          "share": 10.6,
+          "top": [
+            {
+              "desc": "PANERA BREAD #601944 P SKOKIE IL",
+              "date": "2020-12-27",
+              "amount": 10.54,
+              "share": 20.0
+            },
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2020-12-30",
+              "amount": 9.98,
+              "share": 18.9
+            },
+            {
+              "desc": "MCDONALD'S F1715 DES PLAINES IL",
+              "date": "2020-12-16",
+              "amount": 9.54,
+              "share": 18.1
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2020-12-18",
+              "amount": 7.55,
+              "share": 14.3
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2020-12-19",
+              "amount": 7.12,
+              "share": 13.5
+            },
+            {
+              "desc": "Subway 31211 Des Plaines IL",
+              "date": "2020-12-01",
+              "amount": 4.36,
+              "share": 8.3
+            },
+            {
+              "desc": "DD/BR #306011 Q35 GLENVIEW IL",
+              "date": "2020-12-04",
+              "amount": 3.71,
+              "share": 7.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 47.34,
+          "share": 9.5,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0779 MOUNT PROSPEC IL",
+              "date": "2020-12-07",
+              "amount": 29.94,
+              "share": 63.2
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-12-18",
+              "amount": 6.07,
+              "share": 12.8
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-12-24",
+              "amount": 3.25,
+              "share": 6.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-12-22",
+              "amount": 3.24,
+              "share": 6.8
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-12-25",
+              "amount": 2.17,
+              "share": 4.6
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-12-23",
+              "amount": 1.07,
+              "share": 2.3
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-12-26",
+              "amount": 1.07,
+              "share": 2.3
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 30.0,
+          "share": 6.0,
+          "top": [
+            {
+              "desc": "SMART WASH LAUNDRY - NILE NILES IL",
+              "date": "2020-12-05",
+              "amount": 30.0,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-01": {
       "spend": 188.73,
       "income": 5000.0,
-      "spendRate": 4
+      "spendRate": 4,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 67.36,
+          "share": 35.7,
+          "top": [
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-01-21",
+              "amount": 26.87,
+              "share": 39.9
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-01-06",
+              "amount": 14.12,
+              "share": 21.0
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-01-06",
+              "amount": 13.66,
+              "share": 20.3
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2021-01-16",
+              "amount": 12.71,
+              "share": 18.9
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 47.08,
+          "share": 24.9,
+          "top": [
+            {
+              "desc": "JOCKEY CHICAGO IL AURORA IL",
+              "date": "2021-01-01",
+              "amount": 30.85,
+              "share": 65.5
+            },
+            {
+              "desc": "GUESS #3204 AURORA IL",
+              "date": "2021-01-01",
+              "amount": 16.23,
+              "share": 34.5
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 42.24,
+          "share": 22.4,
+          "top": [
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-01-27",
+              "amount": 10.29,
+              "share": 24.4
+            },
+            {
+              "desc": "TST* PARIS BAGUETTE - GLE GLENVIEW IL",
+              "date": "2021-01-07",
+              "amount": 9.09,
+              "share": 21.5
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-01-03",
+              "amount": 8.07,
+              "share": 19.1
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2021-01-07",
+              "amount": 5.56,
+              "share": 13.2
+            },
+            {
+              "desc": "CULVERS OF MORTON GROVE MORTON GROVE IL",
+              "date": "2021-01-03",
+              "amount": 4.87,
+              "share": 11.5
+            },
+            {
+              "desc": "Subway 31211 Des Plaines IL",
+              "date": "2021-01-06",
+              "amount": 4.36,
+              "share": 10.3
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 19.0,
+          "share": 10.1,
+          "top": [
+            {
+              "desc": "SP * SRI VENKATESWARA AURORA IL",
+              "date": "2021-01-01",
+              "amount": 19.0,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 13.05,
+          "share": 6.9,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-01-08",
+              "amount": 5.54,
+              "share": 42.5
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-01-15",
+              "amount": 3.18,
+              "share": 24.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-01-01",
+              "amount": 2.17,
+              "share": 16.6
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-01-05",
+              "amount": 2.16,
+              "share": 16.6
+            }
+          ]
+        }
+      ]
     },
     "2021-02": {
       "spend": 518.79,
       "income": 5000.0,
-      "spendRate": 10
+      "spendRate": 10,
+      "categories": [
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 260.09,
+          "share": 50.1,
+          "top": [
+            {
+              "desc": "HILTON MEDIA GRILL BAR DALLAS TX",
+              "date": "2021-02-13",
+              "amount": 132.17,
+              "share": 50.8
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-02-17",
+              "amount": 59.89,
+              "share": 23.0
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-02-21",
+              "amount": 32.17,
+              "share": 12.4
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-02-28",
+              "amount": 16.64,
+              "share": 6.4
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2021-02-19",
+              "amount": 10.22,
+              "share": 3.9
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2021-02-25",
+              "amount": 7.55,
+              "share": 2.9
+            },
+            {
+              "desc": "HUDSON-DUNKIN ST1515 IRVING TX",
+              "date": "2021-02-17",
+              "amount": 1.45,
+              "share": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 176.57,
+          "share": 34.0,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2021-02-28",
+              "amount": 93.66,
+              "share": 53.0
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2021-02-25",
+              "amount": 44.15,
+              "share": 25.0
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-02-10",
+              "amount": 16.6,
+              "share": 9.4
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2021-02-20",
+              "amount": 15.41,
+              "share": 8.7
+            },
+            {
+              "desc": "WM SUPERCENTER #3198 CARROLLTON TX",
+              "date": "2021-02-13",
+              "amount": 4.7,
+              "share": 2.7
+            },
+            {
+              "desc": "KROGER 0460 CARROLTON TX",
+              "date": "2021-02-13",
+              "amount": 2.05,
+              "share": 1.2
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 70.66,
+          "share": 13.6,
+          "top": [
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 018 NILES IL",
+              "date": "2021-02-25",
+              "amount": 70.66,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 5.42,
+          "share": 1.0,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-02-18",
+              "amount": 5.42,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 3.05,
+          "share": 0.6,
+          "top": [
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-02-17",
+              "amount": 3.05,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Travel & Hospitality",
+          "total": 3.0,
+          "share": 0.6,
+          "top": [
+            {
+              "desc": "LOT D PAY ON FOOT CHICAGO IL",
+              "date": "2021-02-18",
+              "amount": 3.0,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-03": {
       "spend": 735.94,
       "income": 5000.0,
-      "spendRate": 15
+      "spendRate": 15,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 395.49,
+          "share": 53.7,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-03-06",
+              "amount": 73.91,
+              "share": 18.7
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-03-28",
+              "amount": 61.34,
+              "share": 15.5
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-03-20",
+              "amount": 55.92,
+              "share": 14.1
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-03-31",
+              "amount": 47.16,
+              "share": 11.9
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-03-04",
+              "amount": 40.93,
+              "share": 10.3
+            },
+            {
+              "desc": "EXTRA VALUE FOOD & LIQUOR DES PLAINES IL",
+              "date": "2021-03-20",
+              "amount": 39.73,
+              "share": 10.0
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-03-12",
+              "amount": 34.51,
+              "share": 8.7
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 145.4,
+          "share": 19.8,
+          "top": [
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-03-07",
+              "amount": 35.5,
+              "share": 24.4
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-03-14",
+              "amount": 35.5,
+              "share": 24.4
+            },
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2021-03-16",
+              "amount": 26.32,
+              "share": 18.1
+            },
+            {
+              "desc": "TST* PARIS BAGUETTE - GLE GLENVIEW IL",
+              "date": "2021-03-31",
+              "amount": 13.56,
+              "share": 9.3
+            },
+            {
+              "desc": "WINGSTOP 1003 NILES IL",
+              "date": "2021-03-04",
+              "amount": 12.45,
+              "share": 8.6
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-03-21",
+              "amount": 10.57,
+              "share": 7.3
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-03-06",
+              "amount": 9.18,
+              "share": 6.3
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 85.88,
+          "share": 11.7,
+          "top": [
+            {
+              "desc": "ROSS STORES #1543 NILES IL",
+              "date": "2021-03-25",
+              "amount": 68.27,
+              "share": 79.5
+            },
+            {
+              "desc": "SKY HOOKAH AND VAPE DES PLAINES IL",
+              "date": "2021-03-06",
+              "amount": 17.61,
+              "share": 20.5
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 67.54,
+          "share": 9.2,
+          "top": [
+            {
+              "desc": "THE HOME DEPOT 1987 GLENVIEW IL",
+              "date": "2021-03-06",
+              "amount": 67.54,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 41.63,
+          "share": 5.7,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-03-17",
+              "amount": 41.63,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-04": {
       "spend": 470.21,
       "income": 5000.0,
-      "spendRate": 9
+      "spendRate": 9,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 388.64,
+          "share": 82.7,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-04-24",
+              "amount": 110.92,
+              "share": 28.5
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-04-06",
+              "amount": 93.63,
+              "share": 24.1
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-04-24",
+              "amount": 36.81,
+              "share": 9.5
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-04-18",
+              "amount": 31.7,
+              "share": 8.2
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2021-04-26",
+              "amount": 28.53,
+              "share": 7.3
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-04-10",
+              "amount": 23.81,
+              "share": 6.1
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-04-03",
+              "amount": 19.71,
+              "share": 5.1
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 50.88,
+          "share": 10.8,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-04-06",
+              "amount": 50.88,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 18.55,
+          "share": 3.9,
+          "top": [
+            {
+              "desc": "NOODLES & CO 613 GLENVIEW IL",
+              "date": "2021-04-24",
+              "amount": 10.48,
+              "share": 56.5
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-04-10",
+              "amount": 8.07,
+              "share": 43.5
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 12.14,
+          "share": 2.6,
+          "top": [
+            {
+              "desc": "THE HOME DEPOT 1987 GLENVIEW IL",
+              "date": "2021-04-24",
+              "amount": 12.14,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-05": {
       "spend": 569.2,
       "income": 5000.0,
-      "spendRate": 11
+      "spendRate": 11,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 283.04,
+          "share": 49.7,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-05-02",
+              "amount": 106.81,
+              "share": 37.7
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-05-29",
+              "amount": 56.88,
+              "share": 20.1
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-05-01",
+              "amount": 40.44,
+              "share": 14.3
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-05-14",
+              "amount": 27.6,
+              "share": 9.8
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2021-05-16",
+              "amount": 12.14,
+              "share": 4.3
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2021-05-16",
+              "amount": 11.85,
+              "share": 4.2
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2021-05-29",
+              "amount": 10.16,
+              "share": 3.6
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 239.0,
+          "share": 42.0,
+          "top": [
+            {
+              "desc": "HRBLOCK RETAIL NILES IL",
+              "date": "2021-05-06",
+              "amount": 239.0,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 35.97,
+          "share": 6.3,
+          "top": [
+            {
+              "desc": "BONCHON - GLENVIEW GLENVIEW IL",
+              "date": "2021-05-15",
+              "amount": 15.53,
+              "share": 43.2
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-05-07",
+              "amount": 8.9,
+              "share": 24.7
+            },
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2021-05-12",
+              "amount": 8.77,
+              "share": 24.4
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2021-05-15",
+              "amount": 2.77,
+              "share": 7.7
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 11.19,
+          "share": 2.0,
+          "top": [
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-05-06",
+              "amount": 4.34,
+              "share": 38.8
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-05-14",
+              "amount": 3.58,
+              "share": 32.0
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-05-21",
+              "amount": 3.27,
+              "share": 29.2
+            }
+          ]
+        }
+      ]
     },
     "2021-06": {
       "spend": 511.5,
       "income": 5000.0,
-      "spendRate": 10
+      "spendRate": 10,
+      "categories": [
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 175.25,
+          "share": 34.3,
+          "top": [
+            {
+              "desc": "TST* PLATEIA DES PLAINES IL",
+              "date": "2021-06-20",
+              "amount": 139.91,
+              "share": 79.8
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-06-06",
+              "amount": 8.9,
+              "share": 5.1
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-06-30",
+              "amount": 8.9,
+              "share": 5.1
+            },
+            {
+              "desc": "TST* PARIS BAGUETTE - GLE GLENVIEW IL",
+              "date": "2021-06-14",
+              "amount": 6.45,
+              "share": 3.7
+            },
+            {
+              "desc": "DUNKIN #349715 DES PLAINES IL",
+              "date": "2021-06-22",
+              "amount": 6.14,
+              "share": 3.5
+            },
+            {
+              "desc": "STARBUCKS STORE 02623 NILES IL",
+              "date": "2021-06-06",
+              "amount": 4.95,
+              "share": 2.8
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 102.17,
+          "share": 20.0,
+          "top": [
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-06-27",
+              "amount": 53.17,
+              "share": 52.0
+            },
+            {
+              "desc": "COSTCO WHSE #0383 NILES IL",
+              "date": "2021-06-08",
+              "amount": 15.12,
+              "share": 14.8
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-06-24",
+              "amount": 10.2,
+              "share": 10.0
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-06-12",
+              "amount": 9.7,
+              "share": 9.5
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-06-06",
+              "amount": 8.98,
+              "share": 8.8
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-06-25",
+              "amount": 5.0,
+              "share": 4.9
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 99.38,
+          "share": 19.4,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0383 NILES IL",
+              "date": "2021-06-08",
+              "amount": 54.38,
+              "share": 54.7
+            },
+            {
+              "desc": "CASTRO HAND CAR WASH DES PLAINES IL",
+              "date": "2021-06-19",
+              "amount": 33.5,
+              "share": 33.7
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-06-18",
+              "amount": 3.04,
+              "share": 3.1
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-06-07",
+              "amount": 1.41,
+              "share": 1.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-06-13",
+              "amount": 1.41,
+              "share": 1.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-06-14",
+              "amount": 1.41,
+              "share": 1.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-06-15",
+              "amount": 1.41,
+              "share": 1.4
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 56.15,
+          "share": 11.0,
+          "top": [
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 002 WHEELING IL",
+              "date": "2021-06-26",
+              "amount": 56.15,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 38.82,
+          "share": 7.6,
+          "top": [
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-06-12",
+              "amount": 32.8,
+              "share": 84.5
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-06-13",
+              "amount": 6.02,
+              "share": 15.5
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 34.13,
+          "share": 6.7,
+          "top": [
+            {
+              "desc": "TARGET 00013854 WHEELING IL",
+              "date": "2021-06-26",
+              "amount": 20.85,
+              "share": 61.1
+            },
+            {
+              "desc": "ROSS STORES #1527 CHICAGO IL",
+              "date": "2021-06-16",
+              "amount": 8.88,
+              "share": 26.0
+            },
+            {
+              "desc": "ROSS STORES #1543 NILES IL",
+              "date": "2021-06-19",
+              "amount": 4.4,
+              "share": 12.9
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "total": 5.6,
+          "share": 1.1,
+          "top": [
+            {
+              "desc": "CVS/PHARMACY #04396 PARK RIDGE IL",
+              "date": "2021-06-12",
+              "amount": 5.6,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-07": {
       "spend": 489.78,
       "income": 5000.0,
-      "spendRate": 10
+      "spendRate": 10,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 217.27,
+          "share": 44.4,
+          "top": [
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-07-25",
+              "amount": 32.11,
+              "share": 14.8
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-07-18",
+              "amount": 29.65,
+              "share": 13.6
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-07-10",
+              "amount": 27.61,
+              "share": 12.7
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-07-05",
+              "amount": 20.68,
+              "share": 9.5
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-07-01",
+              "amount": 12.66,
+              "share": 5.8
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-07-17",
+              "amount": 11.23,
+              "share": 5.2
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2021-07-18",
+              "amount": 10.64,
+              "share": 4.9
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 120.48,
+          "share": 24.6,
+          "top": [
+            {
+              "desc": "TARGET 00010249 LOMBARD IL",
+              "date": "2021-07-28",
+              "amount": 36.71,
+              "share": 30.5
+            },
+            {
+              "desc": "HALF PRICE BOOKS #087 NILES IL",
+              "date": "2021-07-03",
+              "amount": 24.77,
+              "share": 20.6
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-07-27",
+              "amount": 23.13,
+              "share": 19.2
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-07-14",
+              "amount": 20.35,
+              "share": 16.9
+            },
+            {
+              "desc": "BURLINGTON STORES 162 GLENVIEW IL",
+              "date": "2021-07-28",
+              "amount": 9.8,
+              "share": 8.1
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-07-06",
+              "amount": 5.72,
+              "share": 4.7
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 78.17,
+          "share": 16.0,
+          "top": [
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2021-07-14",
+              "amount": 14.44,
+              "share": 18.5
+            },
+            {
+              "desc": "CHICK-FIL-A #02983 LOMBARD IL",
+              "date": "2021-07-28",
+              "amount": 9.56,
+              "share": 12.2
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-07-09",
+              "amount": 8.9,
+              "share": 11.4
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-07-07",
+              "amount": 8.51,
+              "share": 10.9
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-07-23",
+              "amount": 8.51,
+              "share": 10.9
+            },
+            {
+              "desc": "WILD PITA MEDITERRANEA 847-904-7773 IL",
+              "date": "2021-07-17",
+              "amount": 6.59,
+              "share": 8.4
+            },
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2021-07-30",
+              "amount": 6.57,
+              "share": 8.4
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 69.5,
+          "share": 14.2,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-07-17",
+              "amount": 46.43,
+              "share": 66.8
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-07-31",
+              "amount": 4.34,
+              "share": 6.2
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-07-20",
+              "amount": 3.47,
+              "share": 5.0
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-07-10",
+              "amount": 3.44,
+              "share": 4.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-07-11",
+              "amount": 3.04,
+              "share": 4.4
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-07-28",
+              "amount": 1.73,
+              "share": 2.5
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-07-01",
+              "amount": 1.41,
+              "share": 2.0
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 4.36,
+          "share": 0.9,
+          "top": [
+            {
+              "desc": "LOWES #02728* NORTHBROOK IL",
+              "date": "2021-07-17",
+              "amount": 4.36,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-08": {
       "spend": 837.36,
       "income": 5000.0,
-      "spendRate": 17
+      "spendRate": 17,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 288.09,
+          "share": 34.4,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-08-29",
+              "amount": 82.44,
+              "share": 28.6
+            },
+            {
+              "desc": "MALABAR FOODS 2266163048 IL",
+              "date": "2021-08-08",
+              "amount": 58.9,
+              "share": 20.4
+            },
+            {
+              "desc": "MALABAR FOODS 2266163048 IL",
+              "date": "2021-08-15",
+              "amount": 42.33,
+              "share": 14.7
+            },
+            {
+              "desc": "NEW ROYAL MALABAR GROCER GLENVIEW IL",
+              "date": "2021-08-01",
+              "amount": 32.11,
+              "share": 11.1
+            },
+            {
+              "desc": "MALABAR FOODS 2266163048 IL",
+              "date": "2021-08-22",
+              "amount": 26.57,
+              "share": 9.2
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2021-08-12",
+              "amount": 12.74,
+              "share": 4.4
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-08-12",
+              "amount": 10.31,
+              "share": 3.6
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 273.02,
+          "share": 32.6,
+          "top": [
+            {
+              "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
+              "date": "2021-08-19",
+              "amount": 193.02,
+              "share": 70.7
+            },
+            {
+              "desc": "VCN*COOKCODOR 866-255-1857 IL",
+              "date": "2021-08-04",
+              "amount": 80.0,
+              "share": 29.3
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 99.69,
+          "share": 11.9,
+          "top": [
+            {
+              "desc": "SQ *HIMALAYAN RESTAURANT Morton Grove IL",
+              "date": "2021-08-06",
+              "amount": 28.8,
+              "share": 28.9
+            },
+            {
+              "desc": "FALAFILL EAST MEDITERR 847-8824444 IL",
+              "date": "2021-08-15",
+              "amount": 10.08,
+              "share": 10.1
+            },
+            {
+              "desc": "PANDA EXPRESS 1681 SKOKIE IL",
+              "date": "2021-08-05",
+              "amount": 9.32,
+              "share": 9.3
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-08-21",
+              "amount": 8.9,
+              "share": 8.9
+            },
+            {
+              "desc": "DAIRY QUEEN #13050 DES PLAINES IL",
+              "date": "2021-08-02",
+              "amount": 8.52,
+              "share": 8.5
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-08-27",
+              "amount": 8.51,
+              "share": 8.5
+            },
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2021-08-03",
+              "amount": 6.57,
+              "share": 6.6
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 75.07,
+          "share": 9.0,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-08-29",
+              "amount": 51.65,
+              "share": 68.8
+            },
+            {
+              "desc": "EXXONMOBIL 97472880 DES PLAINES IL",
+              "date": "2021-08-02",
+              "amount": 11.37,
+              "share": 15.1
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-08-18",
+              "amount": 6.19,
+              "share": 8.2
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-08-06",
+              "amount": 3.04,
+              "share": 4.0
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-08-07",
+              "amount": 1.41,
+              "share": 1.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-08-28",
+              "amount": 1.41,
+              "share": 1.9
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 66.92,
+          "share": 8.0,
+          "top": [
+            {
+              "desc": "U HAUL STORE 0085752 847-2981170 IL",
+              "date": "2021-08-02",
+              "amount": 66.92,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 34.57,
+          "share": 4.1,
+          "top": [
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-08-13",
+              "amount": 19.19,
+              "share": 55.5
+            },
+            {
+              "desc": "BURLINGTON STORES 1028 HOFFMAN ESTAT IL",
+              "date": "2021-08-16",
+              "amount": 15.38,
+              "share": 44.5
+            }
+          ]
+        }
+      ]
     },
     "2021-09": {
       "spend": 809.02,
       "income": 5000.0,
-      "spendRate": 16
+      "spendRate": 16,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 463.77,
+          "share": 57.3,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-09-25",
+              "amount": 197.35,
+              "share": 42.6
+            },
+            {
+              "desc": "MALABAR FOODS 2266163048 IL",
+              "date": "2021-09-18",
+              "amount": 75.7,
+              "share": 16.3
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-09-15",
+              "amount": 40.1,
+              "share": 8.6
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-09-17",
+              "amount": 26.67,
+              "share": 5.8
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2021-09-18",
+              "amount": 25.55,
+              "share": 5.5
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2021-09-17",
+              "amount": 24.88,
+              "share": 5.4
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2021-09-29",
+              "amount": 18.24,
+              "share": 3.9
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 122.08,
+          "share": 15.1,
+          "top": [
+            {
+              "desc": "CARTERS #845 SCHAUMBURG IL",
+              "date": "2021-09-19",
+              "amount": 57.41,
+              "share": 47.0
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-09-25",
+              "amount": 41.63,
+              "share": 34.1
+            },
+            {
+              "desc": "TARGET 00019125 MUNDELEIN IL",
+              "date": "2021-09-26",
+              "amount": 13.25,
+              "share": 10.9
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-09-18",
+              "amount": 9.79,
+              "share": 8.0
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 104.72,
+          "share": 12.9,
+          "top": [
+            {
+              "desc": "SQ *HIMALAYAN RESTAURANT Morton Grove IL",
+              "date": "2021-09-10",
+              "amount": 32.08,
+              "share": 30.6
+            },
+            {
+              "desc": "NOODLES & CO 628 SCHAUMBURG IL",
+              "date": "2021-09-19",
+              "amount": 21.28,
+              "share": 20.3
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-09-17",
+              "amount": 17.8,
+              "share": 17.0
+            },
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2021-09-12",
+              "amount": 14.79,
+              "share": 14.1
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-09-02",
+              "amount": 8.9,
+              "share": 8.5
+            },
+            {
+              "desc": "CHIPOTLE 1369 NILES IL",
+              "date": "2021-09-18",
+              "amount": 8.51,
+              "share": 8.1
+            },
+            {
+              "desc": "DD/BR #352059 Q35 NAPERVILLE IL",
+              "date": "2021-09-01",
+              "amount": 1.36,
+              "share": 1.3
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 62.71,
+          "share": 7.8,
+          "top": [
+            {
+              "desc": "IKEA CHICAGO SCHAUMBURG IL",
+              "date": "2021-09-19",
+              "amount": 51.91,
+              "share": 82.8
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-09-12",
+              "amount": 5.42,
+              "share": 8.6
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-09-02",
+              "amount": 3.22,
+              "share": 5.1
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-09-02",
+              "amount": 2.16,
+              "share": 3.4
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 55.74,
+          "share": 6.9,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-09-25",
+              "amount": 51.07,
+              "share": 91.6
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-09-10",
+              "amount": 1.64,
+              "share": 2.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-09-17",
+              "amount": 1.62,
+              "share": 2.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-09-04",
+              "amount": 1.41,
+              "share": 2.5
+            }
+          ]
+        }
+      ]
     },
     "2021-10": {
       "spend": 2340.82,
       "income": 5500.0,
-      "spendRate": 43
+      "spendRate": 43,
+      "categories": [
+        {
+          "name": "Other",
+          "total": 1135.1,
+          "share": 48.5,
+          "top": [
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2021-10-21",
+              "amount": 988.39,
+              "share": 87.1
+            },
+            {
+              "desc": "BZOO-ADMISSION/PARKING 708-688-8809 IL",
+              "date": "2021-10-15",
+              "amount": 67.85,
+              "share": 6.0
+            },
+            {
+              "desc": "FRANKS BARBER SHOP DES PLAINES IL",
+              "date": "2021-10-31",
+              "amount": 20.0,
+              "share": 1.8
+            },
+            {
+              "desc": "SSA BROOKFIELD ZOO BROOKFIELD IL",
+              "date": "2021-10-17",
+              "amount": 16.65,
+              "share": 1.5
+            },
+            {
+              "desc": "ADVOCATE PATIENT PAYMENT DOWNERS GROVE IL",
+              "date": "2021-10-13",
+              "amount": 15.0,
+              "share": 1.3
+            },
+            {
+              "desc": "BZOO-ADMISSION/PARKING 708-688-8809 IL",
+              "date": "2021-10-17",
+              "amount": 15.0,
+              "share": 1.3
+            },
+            {
+              "desc": "SSA BROOKFIELD ZOO BROOKFIELD IL",
+              "date": "2021-10-17",
+              "amount": 12.21,
+              "share": 1.1
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 693.98,
+          "share": 29.6,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-10-14",
+              "amount": 270.16,
+              "share": 38.9
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-10-03",
+              "amount": 82.37,
+              "share": 11.9
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2021-10-09",
+              "amount": 47.38,
+              "share": 6.8
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-10-22",
+              "amount": 42.68,
+              "share": 6.2
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-10-10",
+              "amount": 36.05,
+              "share": 5.2
+            },
+            {
+              "desc": "PATEL BROTHERS NILES IL",
+              "date": "2021-10-30",
+              "amount": 34.75,
+              "share": 5.0
+            },
+            {
+              "desc": "MALABAR FOODS 2266163048 IL",
+              "date": "2021-10-30",
+              "amount": 33.72,
+              "share": 4.9
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 282.93,
+          "share": 12.1,
+          "top": [
+            {
+              "desc": "SEARS 1570 SCHAUMBURG IL",
+              "date": "2021-10-30",
+              "amount": 50.27,
+              "share": 17.8
+            },
+            {
+              "desc": "SQ *GANDHI APPLIANCES Niles IL",
+              "date": "2021-10-09",
+              "amount": 36.37,
+              "share": 12.9
+            },
+            {
+              "desc": "BURLINGTON STORES 162 GLENVIEW IL",
+              "date": "2021-10-31",
+              "amount": 31.94,
+              "share": 11.3
+            },
+            {
+              "desc": "BURLINGTON STORES 1028 HOFFMAN ESTAT IL",
+              "date": "2021-10-24",
+              "amount": 31.88,
+              "share": 11.3
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-10-09",
+              "amount": 30.24,
+              "share": 10.7
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-10-11",
+              "amount": 23.78,
+              "share": 8.4
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-10-16",
+              "amount": 18.73,
+              "share": 6.6
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 67.87,
+          "share": 2.9,
+          "top": [
+            {
+              "desc": "IKEA CHICAGO SCHAUMBURG IL",
+              "date": "2021-10-23",
+              "amount": 42.6,
+              "share": 62.8
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-10-16",
+              "amount": 15.38,
+              "share": 22.7
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-10-17",
+              "amount": 9.89,
+              "share": 14.6
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 64.75,
+          "share": 2.8,
+          "top": [
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2021-10-09",
+              "amount": 30.16,
+              "share": 46.6
+            },
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2021-10-31",
+              "amount": 15.55,
+              "share": 24.0
+            },
+            {
+              "desc": "SQ *BEN & JERRY'S THE GLE Glenview IL",
+              "date": "2021-10-03",
+              "amount": 5.99,
+              "share": 9.3
+            },
+            {
+              "desc": "DUNKIN #353238 Q35 SCHAUMBURG IL",
+              "date": "2021-10-30",
+              "amount": 5.24,
+              "share": 8.1
+            },
+            {
+              "desc": "CHICK-FIL-A #02730 SCHAUMBURG IL",
+              "date": "2021-10-23",
+              "amount": 2.86,
+              "share": 4.4
+            },
+            {
+              "desc": "DUNKIN #307301 Q35 GLENVIEW IL",
+              "date": "2021-10-25",
+              "amount": 2.74,
+              "share": 4.2
+            },
+            {
+              "desc": "WENDY'S 7001 NILES IL",
+              "date": "2021-10-15",
+              "amount": 2.21,
+              "share": 3.4
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 61.06,
+          "share": 2.6,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-10-14",
+              "amount": 58.67,
+              "share": 96.1
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2021-10-16",
+              "amount": 2.39,
+              "share": 3.9
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "total": 35.13,
+          "share": 1.5,
+          "top": [
+            {
+              "desc": "WALGREENS #6228 GLENVIEW IL",
+              "date": "2021-10-30",
+              "amount": 35.13,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-11": {
       "spend": 2443.92,
       "income": 5000.0,
-      "spendRate": 49
+      "spendRate": 49,
+      "categories": [
+        {
+          "name": "Other",
+          "total": 791.15,
+          "share": 32.4,
+          "top": [
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2021-11-03",
+              "amount": 671.15,
+              "share": 84.8
+            },
+            {
+              "desc": "COSTCO *ANNUAL RENEWAL 800-774-2678 WA",
+              "date": "2021-11-02",
+              "amount": 120.0,
+              "share": 15.2
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 701.78,
+          "share": 28.7,
+          "top": [
+            {
+              "desc": "BALSAM HILL US 888-552-2572 CA",
+              "date": "2021-11-30",
+              "amount": 512.31,
+              "share": 73.0
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-11-26",
+              "amount": 68.53,
+              "share": 9.8
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-11-23",
+              "amount": 57.59,
+              "share": 8.2
+            },
+            {
+              "desc": "ROSS STORES #1543 NILES IL",
+              "date": "2021-11-20",
+              "amount": 40.75,
+              "share": 5.8
+            },
+            {
+              "desc": "ROSS STORE #2308 MORTON GROVE IL",
+              "date": "2021-11-20",
+              "amount": 28.65,
+              "share": 4.1
+            },
+            {
+              "desc": "AmazonStores MORTON GROVE WA",
+              "date": "2021-11-20",
+              "amount": 20.99,
+              "share": 3.0
+            },
+            {
+              "desc": "SP * PMI PHOTO HTTPSPMIPHOTO IL",
+              "date": "2021-11-29",
+              "amount": 19.0,
+              "share": 2.7
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 695.59,
+          "share": 28.5,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-11-02",
+              "amount": 161.59,
+              "share": 23.2
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-11-26",
+              "amount": 113.95,
+              "share": 16.4
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-11-23",
+              "amount": 93.99,
+              "share": 13.5
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2021-11-22",
+              "amount": 66.73,
+              "share": 9.6
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-11-07",
+              "amount": 52.46,
+              "share": 7.5
+            },
+            {
+              "desc": "COSTCO WHSE #0383 NILES IL",
+              "date": "2021-11-21",
+              "amount": 49.51,
+              "share": 7.1
+            },
+            {
+              "desc": "FRESH FARMS INTERNATIONAL NILES IL",
+              "date": "2021-11-21",
+              "amount": 36.6,
+              "share": 5.3
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 136.79,
+          "share": 5.6,
+          "top": [
+            {
+              "desc": "BIG BOWL LINCOLNSHIRE LINCOLNSHIRE IL",
+              "date": "2021-11-07",
+              "amount": 44.06,
+              "share": 32.2
+            },
+            {
+              "desc": "CHICK-FIL-A #03867 NILES IL",
+              "date": "2021-11-26",
+              "amount": 23.62,
+              "share": 17.3
+            },
+            {
+              "desc": "SQ *HIMALAYAN RESTAURANT Morton Grove IL",
+              "date": "2021-11-20",
+              "amount": 18.76,
+              "share": 13.7
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-11-13",
+              "amount": 17.8,
+              "share": 13.0
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2021-11-19",
+              "amount": 17.8,
+              "share": 13.0
+            },
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2021-11-05",
+              "amount": 11.11,
+              "share": 8.1
+            },
+            {
+              "desc": "DUNKIN #344808 Q35 PARK RIDGE IL",
+              "date": "2021-11-08",
+              "amount": 3.64,
+              "share": 2.7
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 115.55,
+          "share": 4.7,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-11-02",
+              "amount": 59.07,
+              "share": 51.1
+            },
+            {
+              "desc": "COSTCO GAS #0779 MOUNT PROSPEC IL",
+              "date": "2021-11-22",
+              "amount": 39.66,
+              "share": 34.3
+            },
+            {
+              "desc": "COSTCO GAS #0779 MOUNT PROSPEC IL",
+              "date": "2021-11-22",
+              "amount": 16.82,
+              "share": 14.6
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "total": 3.06,
+          "share": 0.1,
+          "top": [
+            {
+              "desc": "CVS/PHARMACY #04396 PARK RIDGE IL",
+              "date": "2021-11-29",
+              "amount": 3.06,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2021-12": {
       "spend": 319.99,
       "income": 5000.0,
-      "spendRate": 6
+      "spendRate": 6,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 202.29,
+          "share": 63.2,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-12-11",
+              "amount": 81.15,
+              "share": 40.1
+            },
+            {
+              "desc": "MALABAR FOODS 2266163048 IL",
+              "date": "2021-12-04",
+              "amount": 29.75,
+              "share": 14.7
+            },
+            {
+              "desc": "FRESH FARMS NILES IL",
+              "date": "2021-12-11",
+              "amount": 20.89,
+              "share": 10.3
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-12-11",
+              "amount": 16.94,
+              "share": 8.4
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2021-12-02",
+              "amount": 16.3,
+              "share": 8.1
+            },
+            {
+              "desc": "P & P ASIAN FOODS NILES IL",
+              "date": "2021-12-04",
+              "amount": 15.9,
+              "share": 7.9
+            },
+            {
+              "desc": "ROYAL MAHARAJA FOODS NILES IL",
+              "date": "2021-12-04",
+              "amount": 8.96,
+              "share": 4.4
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 74.36,
+          "share": 23.2,
+          "top": [
+            {
+              "desc": "IKEA.COM 400604205 888-434-4532 MD",
+              "date": "2021-12-06",
+              "amount": 74.36,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 43.34,
+          "share": 13.5,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-12-11",
+              "amount": 43.34,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     }
   },
   "years": {
     "2019": {
       "spend": 1906.86,
       "income": 0.0,
-      "spendRate": null
+      "spendRate": null,
+      "categories": [
+        {
+          "name": "Merchandise / Clothing",
+          "total": 1151.32,
+          "share": 60.4,
+          "top": [
+            {
+              "desc": "HP *HP.COM STORE 888-345-5409 CA",
+              "date": "2019-11-29",
+              "amount": 850.97,
+              "share": 73.9
+            },
+            {
+              "desc": "FIVE BELOW 722 NILES IL",
+              "date": "2019-12-09",
+              "amount": 91.27,
+              "share": 7.9
+            },
+            {
+              "desc": "AMZN Mktp US*2Q7UX1JW3 Amzn.com/bill WA",
+              "date": "2019-11-24",
+              "amount": 63.74,
+              "share": 5.5
+            },
+            {
+              "desc": "GAMESTOP #7730 NILES IL",
+              "date": "2019-11-28",
+              "amount": 27.54,
+              "share": 2.4
+            },
+            {
+              "desc": "AMZN Mktp US*A78DD8PB3 Amzn.com/bill WA",
+              "date": "2019-12-04",
+              "amount": 23.78,
+              "share": 2.1
+            },
+            {
+              "desc": "ROSS STORES #1567 MT PROSPECT IL",
+              "date": "2019-11-30",
+              "amount": 21.98,
+              "share": 1.9
+            },
+            {
+              "desc": "AMZN Mktp US*ZJ7G84CG3 Amzn.com/bill WA",
+              "date": "2019-11-29",
+              "amount": 18.98,
+              "share": 1.6
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 316.72,
+          "share": 16.6,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2019-12-01",
+              "amount": 142.99,
+              "share": 45.1
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2019-11-30",
+              "amount": 91.41,
+              "share": 28.9
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2019-11-28",
+              "amount": 49.61,
+              "share": 15.7
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2019-12-10",
+              "amount": 22.2,
+              "share": 7.0
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2019-11-23",
+              "amount": 5.82,
+              "share": 1.8
+            },
+            {
+              "desc": "WM SUPERCENTER #3725 NILES IL",
+              "date": "2019-11-25",
+              "amount": 4.69,
+              "share": 1.5
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 175.48,
+          "share": 9.2,
+          "top": [
+            {
+              "desc": "BIG BOWL LINCOLNSHIRE LINCOLNSHIRE IL",
+              "date": "2019-12-12",
+              "amount": 150.0,
+              "share": 85.5
+            },
+            {
+              "desc": "PANDA EXPRESS #2927 NILES IL",
+              "date": "2019-12-20",
+              "amount": 8.57,
+              "share": 4.9
+            },
+            {
+              "desc": "WENDYS #1172 GLENVIEW IL",
+              "date": "2019-11-27",
+              "amount": 8.33,
+              "share": 4.7
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-12-13",
+              "amount": 3.3,
+              "share": 1.9
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-11-25",
+              "amount": 2.87,
+              "share": 1.6
+            },
+            {
+              "desc": "RAK CAFE 60715778 RIVERWOODS IL",
+              "date": "2019-11-27",
+              "amount": 1.29,
+              "share": 0.7
+            },
+            {
+              "desc": "MARKET@WORK 2067379149 RENTON WA",
+              "date": "2019-11-27",
+              "amount": 0.7,
+              "share": 0.4
+            }
+          ]
+        },
+        {
+          "name": "Travel & Hospitality",
+          "total": 131.4,
+          "share": 6.9,
+          "top": [
+            {
+              "desc": "IL TOLLWAY-WEB DOWNERS GROVE IL",
+              "date": "2019-12-10",
+              "amount": 131.4,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 86.52,
+          "share": 4.5,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0779 MOUNT PROSPEC IL",
+              "date": "2019-12-14",
+              "amount": 33.83,
+              "share": 39.1
+            },
+            {
+              "desc": "SPEEDWAY 07649 923 N MILW BUFFALO GROVE IL",
+              "date": "2019-11-27",
+              "amount": 25.34,
+              "share": 29.3
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2019-11-23",
+              "amount": 8.9,
+              "share": 10.3
+            },
+            {
+              "desc": "SPEEDWAY 04248 DEERFIELD DEERFIELD IL",
+              "date": "2019-12-12",
+              "amount": 8.44,
+              "share": 9.8
+            },
+            {
+              "desc": "SHELL OIL 57444177208 NILES IL",
+              "date": "2019-12-12",
+              "amount": 7.85,
+              "share": 9.1
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2019-11-23",
+              "amount": 2.16,
+              "share": 2.5
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 35.55,
+          "share": 1.9,
+          "top": [
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 018 NILES IL",
+              "date": "2019-12-17",
+              "amount": 35.55,
+              "share": 100.0
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 9.87,
+          "share": 0.5,
+          "top": [
+            {
+              "desc": "ATOM TICKETS LLC 844-838-6284 CA",
+              "date": "2019-12-14",
+              "amount": 9.87,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     },
     "2020": {
       "spend": 7534.91,
       "income": 57500.0,
-      "spendRate": 13
+      "spendRate": 13,
+      "categories": [
+        {
+          "name": "Other",
+          "total": 4204.29,
+          "share": 55.8,
+          "top": [
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2020-02-04",
+              "amount": 1636.37,
+              "share": 38.9
+            },
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2020-10-08",
+              "amount": 1368.37,
+              "share": 32.5
+            },
+            {
+              "desc": "XSPORT NILES 877-417-1450 IL",
+              "date": "2020-11-15",
+              "amount": 408.0,
+              "share": 9.7
+            },
+            {
+              "desc": "MILAAP USA WWW.MILAAP.OR TX",
+              "date": "2020-03-03",
+              "amount": 350.0,
+              "share": 8.3
+            },
+            {
+              "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
+              "date": "2020-11-12",
+              "amount": 143.77,
+              "share": 3.4
+            },
+            {
+              "desc": "CITY HALL CHICAGO IL",
+              "date": "2020-10-03",
+              "amount": 137.78,
+              "share": 3.3
+            },
+            {
+              "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
+              "date": "2020-11-07",
+              "amount": 120.0,
+              "share": 2.9
+            }
+          ]
+        },
+        {
+          "name": "Supermarket / Groceries",
+          "total": 1217.39,
+          "share": 16.2,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-11-28",
+              "amount": 262.27,
+              "share": 21.5
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-11-25",
+              "amount": 120.0,
+              "share": 9.9
+            },
+            {
+              "desc": "WAL-MART #3725 NILES IL",
+              "date": "2020-11-08",
+              "amount": 116.12,
+              "share": 9.5
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-07-22",
+              "amount": 98.23,
+              "share": 8.1
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-12-07",
+              "amount": 62.64,
+              "share": 5.1
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2020-03-04",
+              "amount": 56.88,
+              "share": 4.7
+            },
+            {
+              "desc": "COSTCO WHSE #0779 MT PROSPECT IL",
+              "date": "2020-11-10",
+              "amount": 45.95,
+              "share": 3.8
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 1187.12,
+          "share": 15.8,
+          "top": [
+            {
+              "desc": "AMZN Mktp US*F00VW2NB3 Amzn.com/bill WA",
+              "date": "2020-11-28",
+              "amount": 226.9,
+              "share": 19.1
+            },
+            {
+              "desc": "OLD NAVY US 3070 NILES IL",
+              "date": "2020-09-17",
+              "amount": 150.55,
+              "share": 12.7
+            },
+            {
+              "desc": "Amazon.com*0A0AQ5S13 Amzn.com/bill WA",
+              "date": "2020-12-03",
+              "amount": 127.49,
+              "share": 10.7
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2020-11-08",
+              "amount": 88.17,
+              "share": 7.4
+            },
+            {
+              "desc": "TARGET 00011767 ARLINGTON HEI IL",
+              "date": "2020-11-20",
+              "amount": 85.65,
+              "share": 7.2
+            },
+            {
+              "desc": "Amazon.com*EI80T2813 Amzn.com/bill WA",
+              "date": "2020-11-23",
+              "amount": 75.9,
+              "share": 6.4
+            },
+            {
+              "desc": "ROSS STORES #1543 NILES IL",
+              "date": "2020-11-15",
+              "amount": 55.08,
+              "share": 4.6
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 383.62,
+          "share": 5.1,
+          "top": [
+            {
+              "desc": "TST* SABRI NIHARI RESTAUR CHICAGO IL",
+              "date": "2020-11-21",
+              "amount": 102.36,
+              "share": 26.7
+            },
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2020-11-01",
+              "amount": 16.68,
+              "share": 4.3
+            },
+            {
+              "desc": "PITA INN DES PLAINES IL",
+              "date": "2020-03-01",
+              "amount": 13.71,
+              "share": 3.6
+            },
+            {
+              "desc": "BRUNCHCAFENILES NILES IL",
+              "date": "2020-10-17",
+              "amount": 12.0,
+              "share": 3.1
+            },
+            {
+              "desc": "PANERA BREAD #601944 P SKOKIE IL",
+              "date": "2020-12-27",
+              "amount": 10.54,
+              "share": 2.7
+            },
+            {
+              "desc": "INDIAN BISTRO EXPRESS NILES IL",
+              "date": "2020-12-30",
+              "amount": 9.98,
+              "share": 2.6
+            },
+            {
+              "desc": "MCDONALD'S F1715 DES PLAINES IL",
+              "date": "2020-12-16",
+              "amount": 9.54,
+              "share": 2.5
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 292.9,
+          "share": 3.9,
+          "top": [
+            {
+              "desc": "BAHAMA BREEZES00030296 SCHAUMBURG IL",
+              "date": "2020-10-10",
+              "amount": 168.11,
+              "share": 57.4
+            },
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 003 DES PLAINES IL",
+              "date": "2020-10-31",
+              "amount": 77.66,
+              "share": 26.5
+            },
+            {
+              "desc": "HOOTERS #17 SCHAUMBURG IL",
+              "date": "2020-03-13",
+              "amount": 42.22,
+              "share": 14.4
+            },
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 003 DES PLAINES IL",
+              "date": "2020-10-31",
+              "amount": 4.91,
+              "share": 1.7
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 229.48,
+          "share": 3.0,
+          "top": [
+            {
+              "desc": "SPEEDWAY 07649 923 N MILW BUFFALO GROVE IL",
+              "date": "2020-02-24",
+              "amount": 43.03,
+              "share": 18.8
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-10-27",
+              "amount": 35.65,
+              "share": 15.5
+            },
+            {
+              "desc": "COSTCO GAS #0779 MOUNT PROSPEC IL",
+              "date": "2020-12-07",
+              "amount": 29.94,
+              "share": 13.0
+            },
+            {
+              "desc": "SPEEDWAY 07649 923 N MILW BUFFALO GROVE IL",
+              "date": "2020-01-24",
+              "amount": 21.0,
+              "share": 9.2
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-02-11",
+              "amount": 16.39,
+              "share": 7.1
+            },
+            {
+              "desc": "EXXONMOBIL 97603310 DES PLAINES IL",
+              "date": "2020-01-16",
+              "amount": 11.29,
+              "share": 4.9
+            },
+            {
+              "desc": "SHELL OIL 57446509101 DES PLAINES IL",
+              "date": "2020-02-06",
+              "amount": 10.81,
+              "share": 4.7
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "total": 20.11,
+          "share": 0.3,
+          "top": [
+            {
+              "desc": "WALGREENS #5711 DES PLAINES IL",
+              "date": "2020-01-21",
+              "amount": 14.62,
+              "share": 72.7
+            },
+            {
+              "desc": "WALGREENS #5711 DES PLAINES IL",
+              "date": "2020-01-21",
+              "amount": 5.49,
+              "share": 27.3
+            }
+          ]
+        }
+      ]
     },
     "2021": {
       "spend": 10235.26,
       "income": 60500.0,
-      "spendRate": 17
+      "spendRate": 17,
+      "categories": [
+        {
+          "name": "Supermarket / Groceries",
+          "total": 3974.26,
+          "share": 38.8,
+          "top": [
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-10-14",
+              "amount": 270.16,
+              "share": 6.8
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-09-25",
+              "amount": 197.35,
+              "share": 5.0
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-11-02",
+              "amount": 161.59,
+              "share": 4.1
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-11-26",
+              "amount": 113.95,
+              "share": 2.9
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-04-24",
+              "amount": 110.92,
+              "share": 2.8
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-05-02",
+              "amount": 106.81,
+              "share": 2.7
+            },
+            {
+              "desc": "COSTCO WHSE #0348 GLENVIEW IL",
+              "date": "2021-11-23",
+              "amount": 93.99,
+              "share": 2.4
+            }
+          ]
+        },
+        {
+          "name": "Other",
+          "total": 2457.27,
+          "share": 24.0,
+          "top": [
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2021-10-21",
+              "amount": 988.39,
+              "share": 40.2
+            },
+            {
+              "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
+              "date": "2021-11-03",
+              "amount": 671.15,
+              "share": 27.3
+            },
+            {
+              "desc": "HRBLOCK RETAIL NILES IL",
+              "date": "2021-05-06",
+              "amount": 239.0,
+              "share": 9.7
+            },
+            {
+              "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
+              "date": "2021-08-19",
+              "amount": 193.02,
+              "share": 7.9
+            },
+            {
+              "desc": "COSTCO *ANNUAL RENEWAL 800-774-2678 WA",
+              "date": "2021-11-02",
+              "amount": 120.0,
+              "share": 4.9
+            },
+            {
+              "desc": "VCN*COOKCODOR 866-255-1857 IL",
+              "date": "2021-08-04",
+              "amount": 80.0,
+              "share": 3.3
+            },
+            {
+              "desc": "BZOO-ADMISSION/PARKING 708-688-8809 IL",
+              "date": "2021-10-15",
+              "amount": 67.85,
+              "share": 2.8
+            }
+          ]
+        },
+        {
+          "name": "Merchandise / Clothing",
+          "total": 1431.98,
+          "share": 14.0,
+          "top": [
+            {
+              "desc": "BALSAM HILL US 888-552-2572 CA",
+              "date": "2021-11-30",
+              "amount": 512.31,
+              "share": 35.8
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-11-26",
+              "amount": 68.53,
+              "share": 4.8
+            },
+            {
+              "desc": "ROSS STORES #1543 NILES IL",
+              "date": "2021-03-25",
+              "amount": 68.27,
+              "share": 4.8
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-11-23",
+              "amount": 57.59,
+              "share": 4.0
+            },
+            {
+              "desc": "CARTERS #845 SCHAUMBURG IL",
+              "date": "2021-09-19",
+              "amount": 57.41,
+              "share": 4.0
+            },
+            {
+              "desc": "SEARS 1570 SCHAUMBURG IL",
+              "date": "2021-10-30",
+              "amount": 50.27,
+              "share": 3.5
+            },
+            {
+              "desc": "TARGET 00011254 NILES IL",
+              "date": "2021-09-25",
+              "amount": 41.63,
+              "share": 2.9
+            }
+          ]
+        },
+        {
+          "name": "Restaurant / Fast-food",
+          "total": 1161.62,
+          "share": 11.3,
+          "top": [
+            {
+              "desc": "TST* PLATEIA DES PLAINES IL",
+              "date": "2021-06-20",
+              "amount": 139.91,
+              "share": 12.0
+            },
+            {
+              "desc": "HILTON MEDIA GRILL BAR DALLAS TX",
+              "date": "2021-02-13",
+              "amount": 132.17,
+              "share": 11.4
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-02-17",
+              "amount": 59.89,
+              "share": 5.2
+            },
+            {
+              "desc": "BIG BOWL LINCOLNSHIRE LINCOLNSHIRE IL",
+              "date": "2021-11-07",
+              "amount": 44.06,
+              "share": 3.8
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-03-07",
+              "amount": 35.5,
+              "share": 3.1
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-03-14",
+              "amount": 35.5,
+              "share": 3.1
+            },
+            {
+              "desc": "THALAIVAS INDIAN KITCHEN PARK RIDGE IL",
+              "date": "2021-02-21",
+              "amount": 32.17,
+              "share": 2.8
+            }
+          ]
+        },
+        {
+          "name": "Gas / Fuel",
+          "total": 641.81,
+          "share": 6.3,
+          "top": [
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-11-02",
+              "amount": 59.07,
+              "share": 9.2
+            },
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-10-14",
+              "amount": 58.67,
+              "share": 9.1
+            },
+            {
+              "desc": "COSTCO GAS #0383 NILES IL",
+              "date": "2021-06-08",
+              "amount": 54.38,
+              "share": 8.5
+            },
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-08-29",
+              "amount": 51.65,
+              "share": 8.0
+            },
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-09-25",
+              "amount": 51.07,
+              "share": 8.0
+            },
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-04-06",
+              "amount": 50.88,
+              "share": 7.9
+            },
+            {
+              "desc": "COSTCO GAS #0348 GLENVIEW IL",
+              "date": "2021-07-17",
+              "amount": 46.43,
+              "share": 7.2
+            }
+          ]
+        },
+        {
+          "name": "Home Improvement",
+          "total": 394.72,
+          "share": 3.9,
+          "top": [
+            {
+              "desc": "IKEA.COM 400604205 888-434-4532 MD",
+              "date": "2021-12-06",
+              "amount": 74.36,
+              "share": 18.8
+            },
+            {
+              "desc": "THE HOME DEPOT 1987 GLENVIEW IL",
+              "date": "2021-03-06",
+              "amount": 67.54,
+              "share": 17.1
+            },
+            {
+              "desc": "U HAUL STORE 0085752 847-2981170 IL",
+              "date": "2021-08-02",
+              "amount": 66.92,
+              "share": 17.0
+            },
+            {
+              "desc": "IKEA CHICAGO SCHAUMBURG IL",
+              "date": "2021-09-19",
+              "amount": 51.91,
+              "share": 13.2
+            },
+            {
+              "desc": "IKEA CHICAGO SCHAUMBURG IL",
+              "date": "2021-10-23",
+              "amount": 42.6,
+              "share": 10.8
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-06-12",
+              "amount": 32.8,
+              "share": 8.3
+            },
+            {
+              "desc": "THE HOME DEPOT 1981 NILES IL",
+              "date": "2021-10-16",
+              "amount": 15.38,
+              "share": 3.9
+            }
+          ]
+        },
+        {
+          "name": "Beverages / Bar",
+          "total": 126.81,
+          "share": 1.2,
+          "top": [
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 018 NILES IL",
+              "date": "2021-02-25",
+              "amount": 70.66,
+              "share": 55.7
+            },
+            {
+              "desc": "BINNYS BEVERAGE DEPOT 002 WHEELING IL",
+              "date": "2021-06-26",
+              "amount": 56.15,
+              "share": 44.3
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "total": 43.79,
+          "share": 0.4,
+          "top": [
+            {
+              "desc": "WALGREENS #6228 GLENVIEW IL",
+              "date": "2021-10-30",
+              "amount": 35.13,
+              "share": 80.2
+            },
+            {
+              "desc": "CVS/PHARMACY #04396 PARK RIDGE IL",
+              "date": "2021-06-12",
+              "amount": 5.6,
+              "share": 12.8
+            },
+            {
+              "desc": "CVS/PHARMACY #04396 PARK RIDGE IL",
+              "date": "2021-11-29",
+              "amount": 3.06,
+              "share": 7.0
+            }
+          ]
+        },
+        {
+          "name": "Travel & Hospitality",
+          "total": 3.0,
+          "share": 0.0,
+          "top": [
+            {
+              "desc": "LOT D PAY ON FOOT CHICAGO IL",
+              "date": "2021-02-18",
+              "amount": 3.0,
+              "share": 100.0
+            }
+          ]
+        }
+      ]
     }
   }
 }
