@@ -13,24 +13,25 @@
   --on-fill:#ffffff; --ring:rgba(29,74,158,.14);
   --font-mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;
   --font-sans:system-ui,sans-serif;
-  --logo-light:block; --logo-dark:none;
+  --logo-light:block; --logo-dark:none; --rule:#dde1e7;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){ color-scheme:dark;
     --ttm-steel:#98a0ac; --surface:#07090d; --text:#98a0ac; --ink:#e6e9ee; --logo-tile:#0f141c;
-    --ring:rgba(43,96,190,.28); --logo-light:none; --logo-dark:block; }
+    --ring:rgba(43,96,190,.28); --rule:#1c2430; --logo-light:none; --logo-dark:block; }
 }
 :root[data-theme="dark"]{ color-scheme:dark;
   --ttm-steel:#98a0ac; --surface:#07090d; --text:#98a0ac; --ink:#e6e9ee; --logo-tile:#0f141c;
-  --ring:rgba(43,96,190,.28); --logo-light:none; --logo-dark:block; }
+  --ring:rgba(43,96,190,.28); --rule:#1c2430; --logo-light:none; --logo-dark:block; }
 html,body{background:var(--surface);}
 body{margin:0;color:var(--text);font-family:var(--font-sans);font-size:16px;line-height:1.5;padding-inline:16px;}
-.wrap{max-width:960px;margin:0 auto;padding-block:48px 64px;display:flex;flex-direction:column;align-items:center;gap:48px;}
-header{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}
-.logo{width:112px;height:112px;}
+.wrap{max-width:960px;margin:0 auto;padding-block:32px 64px;display:flex;flex-direction:column;align-items:center;gap:40px;}
+.logo{width:clamp(64px,14vw,112px);height:auto;aspect-ratio:1;flex:none;}
+.intro{width:100%;box-sizing:border-box;display:flex;align-items:center;gap:clamp(16px,4vw,40px);padding:clamp(24px,5vw,40px);background:var(--logo-tile);border:1px solid var(--rule);border-radius:16px;}
 .logo .l{display:var(--logo-light);width:100%;height:100%;}
 .logo .d{display:var(--logo-dark);width:100%;height:100%;}
 h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.02em;text-wrap:balance;}
+.intro-text{display:flex;flex-direction:column;gap:12px;min-width:0;}
 .sub{margin:0;max-width:52ch;font-size:clamp(15px,2.2vw,18px);text-wrap:balance;}
 .sub b{font-family:var(--font-mono);font-weight:500;color:var(--ttm-green);letter-spacing:.06em;}
 :root[data-theme="dark"] .sub b{color:var(--ink);}
@@ -48,14 +49,16 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 </head>
 <body>
 <div class="wrap">
-  <header>
+  <section class="intro" aria-label="About">
     <div class="logo" role="img" aria-label="TTM Tech">
       <img class="l" src="ttm-tech-logo-light.svg" alt="" width="112" height="112">
       <img class="d" src="ttm-tech-logo-dark.svg" alt="" width="112" height="112">
     </div>
-    <h1>Spend Analyzer</h1>
+    <div class="intro-text">
+      <h1>Spend Analyzer</h1>
     <p class="sub"><b>Know Your Money (KYM)</b> through your spends, investments and savings.</p>
-  </header>
+    </div>
+  </section>
   <section class="rates" aria-label="Rates">
     <ul class="bubbles">
       <li class="bubble spend"><span class="val">58<small>%</small></span><span class="lbl">Spend Rate</span></li>
