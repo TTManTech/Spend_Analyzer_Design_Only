@@ -44,7 +44,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .val{font-family:var(--font-mono);font-weight:700;font-size:clamp(22px,6vw,44px);line-height:1;font-variant-numeric:tabular-nums;}
 .val small{font-size:.55em;font-weight:500;margin-left:1px;}
 .lbl{font-size:clamp(10px,2.2vw,13px);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.2;}
-.note{margin:0;font-size:13px;color:var(--text);}
+.note{margin:0;font-size:13px;color:var(--text);text-align:center;}
 .period{display:flex;flex-direction:column;align-items:center;gap:8px;}
 .period-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
 .field{display:flex;flex-direction:column;gap:4px;}
@@ -79,11 +79,11 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
   </section>
   <section class="rates" aria-label="Rates">
     <ul class="bubbles">
-      <li class="bubble spend"><span class="val">58<small>%</small></span><span class="lbl">Spend Rate</span></li>
+      <li class="bubble spend"><span class="val" id="spend-rate">–<small>%</small></span><span class="lbl">Spend Rate</span></li>
       <li class="bubble invest"><span class="val">24<small>%</small></span><span class="lbl">Investment Rate</span></li>
       <li class="bubble save"><span class="val">18<small>%</small></span><span class="lbl">Savings Rate</span></li>
     </ul>
-    <p class="note">Sample figures · 58% + 24% + 18% = 100%</p>
+    <p class="note" id="note">Spend rate = month's spend ÷ month's income · Investment and savings rates are sample figures</p>
   </section>
 </div>
 <script>
@@ -103,7 +103,14 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     var y=+ySel.value, m=+mSel.value, isNow=(y===TODAY.getFullYear()&&m===TODAY.getMonth());
     var end=isNow?TODAY.getDate():new Date(y,m+1,0).getDate();
     range.innerHTML="Showing <b>1–"+end+" "+MONTHS[m]+" "+y+"</b>"+(isNow?" · today":"");
+    var row=data&&data[y+"-"+String(m+1).padStart(2,"0")], rate=row?row.spendRate:null;
+    spendRate.firstChild.nodeValue=(rate==null)?"–":rate;
   }
+  // Monthly spend rates are precomputed from the master spreadsheet by scripts/build_spend_rates.py.
+  var data=null, spendRate=document.getElementById("spend-rate");
+  fetch("data/spend-rates.json").then(function(r){return r.json();})
+    .then(function(j){data=j.months;update();})
+    .catch(function(){});
   ySel.value=TODAY.getFullYear(); fillMonths(); mSel.value=TODAY.getMonth();
   ySel.addEventListener("change",function(){fillMonths();update();});
   mSel.addEventListener("change",update);
