@@ -14,15 +14,18 @@
   --font-mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;
   --font-sans:system-ui,sans-serif;
   --logo-light:block; --logo-dark:none; --rule:#dde1e7;
+  --picker-bg:#e6ecf6; --ytd-fill:#6b7380;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){ color-scheme:dark;
     --ttm-steel:#98a0ac; --surface:#07090d; --text:#98a0ac; --ink:#e6e9ee; --logo-tile:#0f141c;
-    --ring:rgba(43,96,190,.28); --rule:#1c2430; --logo-light:none; --logo-dark:block; }
+    --ring:rgba(43,96,190,.28); --rule:#1c2430; --logo-light:none; --logo-dark:block;
+    --picker-bg:#0f1a2c; --ytd-fill:#3d4552; }
 }
 :root[data-theme="dark"]{ color-scheme:dark;
   --ttm-steel:#98a0ac; --surface:#07090d; --text:#98a0ac; --ink:#e6e9ee; --logo-tile:#0f141c;
-  --ring:rgba(43,96,190,.28); --rule:#1c2430; --logo-light:none; --logo-dark:block; }
+  --ring:rgba(43,96,190,.28); --rule:#1c2430; --logo-light:none; --logo-dark:block;
+  --picker-bg:#0f1a2c; --ytd-fill:#3d4552; }
 html,body{background:var(--surface);}
 body{margin:0;color:var(--text);font-family:var(--font-sans);font-size:16px;line-height:1.5;padding-inline:16px;}
 .wrap{max-width:960px;margin:0 auto;padding-block:32px 64px;display:flex;flex-direction:column;align-items:center;gap:40px;}
@@ -46,11 +49,29 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .lbl{font-size:clamp(10px,2.2vw,13px);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.2;}
 .note{margin:0;font-size:13px;color:var(--text);text-align:center;}
 .period{display:flex;flex-direction:column;align-items:center;gap:8px;}
-.period-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
+.period-controls{display:flex;justify-content:center;align-items:center;gap:clamp(10px,3vw,16px);}
+.picker{display:flex;gap:clamp(8px,2.5vw,12px);padding:12px clamp(10px,3vw,14px);background:var(--picker-bg);border:1px solid var(--rule);border-radius:14px;transition:opacity .15s;}
+.period.ytd-mode .picker{opacity:.55;}
+.ytd-wrap{position:relative;}
+.ytd{flex:none;width:clamp(68px,19vw,80px);height:clamp(68px,19vw,80px);border-radius:50%;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  background:var(--ytd-fill);color:var(--on-fill);box-shadow:0 0 0 5px var(--ring);font-family:var(--font-mono);padding:0;}
+.ytd:focus-visible{outline:2px solid var(--ttm-blue-bright);outline-offset:6px;}
+.ytd[aria-pressed="true"]{box-shadow:0 0 0 5px var(--ttm-blue-bright);}
+.ytd-t{font-weight:700;font-size:20px;line-height:1;letter-spacing:.04em;}
+.ytd-y{font-size:12px;font-weight:500;opacity:.9;}
+.ytd-pop{position:absolute;top:calc(100% + 14px);right:0;z-index:10;width:216px;box-sizing:border-box;padding:12px;background:var(--logo-tile);
+  border:1px solid var(--rule);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.18);}
+.ytd-pop[hidden]{display:none;}
+.ytd-pop p{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--ttm-steel);}
+.ytd-years{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.ytd-years button{font:500 14px/1 var(--font-mono);padding:9px 0;border-radius:8px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;}
+.ytd-years button:hover{border-color:var(--ttm-blue-bright);}
+.ytd-years button[aria-pressed="true"]{background:var(--ttm-blue);border-color:var(--ttm-blue);color:var(--on-fill);}
+.ytd-years button:focus-visible{outline:2px solid var(--ttm-blue-bright);outline-offset:2px;}
 .field{display:flex;flex-direction:column;gap:4px;}
 .field span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--ttm-steel);}
 .field select{appearance:none;-webkit-appearance:none;font:500 16px/1.2 var(--font-mono);color:var(--ink);background-color:var(--logo-tile);
-  border:1px solid var(--rule);border-radius:10px;padding:10px 36px 10px 14px;min-width:120px;cursor:pointer;
+  border:1px solid var(--rule);border-radius:10px;padding:10px 32px 10px 12px;min-width:clamp(88px,24vw,120px);cursor:pointer;
   background-image:linear-gradient(45deg,transparent 50%,var(--ttm-steel) 50%),linear-gradient(135deg,var(--ttm-steel) 50%,transparent 50%);
   background-position:calc(100% - 18px) 55%,calc(100% - 13px) 55%;background-size:5px 5px;background-repeat:no-repeat;}
 .field select:focus-visible{outline:2px solid var(--ttm-blue-bright);outline-offset:2px;}
@@ -72,8 +93,19 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
   </section>
   <section class="period" aria-label="Period">
     <div class="period-controls">
-      <label class="field"><span>Month</span><select id="month"></select></label>
-      <label class="field"><span>Year</span><select id="year"></select></label>
+      <div class="picker">
+        <label class="field"><span>Month</span><select id="month"></select></label>
+        <label class="field"><span>Year</span><select id="year"></select></label>
+      </div>
+      <div class="ytd-wrap">
+        <button type="button" class="ytd" id="ytd" aria-haspopup="dialog" aria-expanded="false" aria-controls="ytd-pop" aria-pressed="false">
+          <span class="ytd-t">YTD</span><span class="ytd-y" id="ytd-year">Year</span>
+        </button>
+        <div class="ytd-pop" id="ytd-pop" role="dialog" aria-label="Year to date" hidden>
+          <p>Year to date</p>
+          <div class="ytd-years" id="ytd-years"></div>
+        </div>
+      </div>
     </div>
     <p class="period-range" id="range" aria-live="polite"></p>
   </section>
@@ -83,7 +115,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
       <li class="bubble invest"><span class="val">24<small>%</small></span><span class="lbl">Investment Rate</span></li>
       <li class="bubble save"><span class="val">18<small>%</small></span><span class="lbl">Savings Rate</span></li>
     </ul>
-    <p class="note" id="note">Spend rate = month's spend ÷ month's income · Investment and savings rates are sample figures</p>
+    <p class="note" id="note">Spend rate = spend ÷ income for the selected month or YTD year · Investment and savings rates are sample figures</p>
   </section>
 </div>
 <script>
@@ -100,20 +132,60 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     mSel.value=Math.min(isNaN(keep)?max:keep,max);
   }
   function update(){
+    if(ytdYear!==null){ showYtd(); return; }
+    period.classList.remove("ytd-mode");
     var y=+ySel.value, m=+mSel.value, isNow=(y===TODAY.getFullYear()&&m===TODAY.getMonth());
     var end=isNow?TODAY.getDate():new Date(y,m+1,0).getDate();
     range.innerHTML="Showing <b>1–"+end+" "+MONTHS[m]+" "+y+"</b>"+(isNow?" · today":"");
-    var row=data&&data[y+"-"+String(m+1).padStart(2,"0")], rate=row?row.spendRate:null;
+    setRate(data&&data.months[y+"-"+String(m+1).padStart(2,"0")]);
+  }
+  function setRate(row){
+    var rate=row?row.spendRate:null;
     spendRate.firstChild.nodeValue=(rate==null)?"–":rate;
   }
+  // YTD: whole calendar year up to today; years after today have no data yet.
+  var YTD_YEARS=[2019,2020,2021,2022,2023,2024,2025], ytdYear=null;
+  var period=document.querySelector(".period"), ytdBtn=document.getElementById("ytd"), ytdPop=document.getElementById("ytd-pop"),
+      ytdLabel=document.getElementById("ytd-year"), ytdList=document.getElementById("ytd-years");
+  YTD_YEARS.forEach(function(y){
+    var b=document.createElement("button"); b.type="button"; b.textContent=y; b.setAttribute("aria-pressed","false");
+    b.addEventListener("click",function(){ ytdYear=y; closePop(true); update(); });
+    ytdList.appendChild(b);
+  });
+  function showYtd(){
+    var y=ytdYear, ty=TODAY.getFullYear();
+    period.classList.add("ytd-mode");
+    ytdBtn.setAttribute("aria-pressed","true"); ytdLabel.textContent=y;
+    Array.prototype.forEach.call(ytdList.children,function(b){ b.setAttribute("aria-pressed",String(+b.textContent===y)); });
+    if(y>ty){ range.innerHTML="Showing YTD <b>"+y+"</b> · no data yet"; setRate(null); return; }
+    range.innerHTML="Showing YTD <b>1 Jan–"+(y===ty?TODAY.getDate()+" "+MONTHS[TODAY.getMonth()]:"31 Dec")+" "+y+"</b>"+(y===ty?" · today":"");
+    var row=data&&data.years[y];
+    if(row&&row.spendRate==null) range.innerHTML+=" · no income recorded";
+    setRate(row);
+  }
+  function clearYtd(){
+    ytdYear=null; ytdBtn.setAttribute("aria-pressed","false"); ytdLabel.textContent="Year";
+    Array.prototype.forEach.call(ytdList.children,function(b){ b.setAttribute("aria-pressed","false"); });
+  }
+  function openPop(){
+    ytdPop.hidden=false; ytdBtn.setAttribute("aria-expanded","true");
+    (ytdList.querySelector('[aria-pressed="true"]')||ytdList.firstChild).focus();
+  }
+  function closePop(refocus){
+    ytdPop.hidden=true; ytdBtn.setAttribute("aria-expanded","false");
+    if(refocus) ytdBtn.focus();
+  }
+  ytdBtn.addEventListener("click",function(){ ytdPop.hidden?openPop():closePop(false); });
+  document.addEventListener("click",function(e){ if(!ytdPop.hidden&&!e.target.closest(".ytd-wrap")) closePop(false); });
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!ytdPop.hidden) closePop(true); });
   // Monthly spend rates are precomputed from the master spreadsheet by scripts/build_spend_rates.py.
   var data=null, spendRate=document.getElementById("spend-rate");
   fetch("data/spend-rates.json").then(function(r){return r.json();})
-    .then(function(j){data=j.months;update();})
+    .then(function(j){data=j;update();})
     .catch(function(){});
   ySel.value=TODAY.getFullYear(); fillMonths(); mSel.value=TODAY.getMonth();
-  ySel.addEventListener("change",function(){fillMonths();update();});
-  mSel.addEventListener("change",update);
+  ySel.addEventListener("change",function(){clearYtd();fillMonths();update();});
+  mSel.addEventListener("change",function(){clearYtd();update();});
   update();
 })();
 </script>

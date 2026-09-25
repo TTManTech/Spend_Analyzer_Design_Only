@@ -1,7 +1,7 @@
 """Build data/spend-rates.json from data/Master_Data_V0.1.xlsx.
 
 Spend rate for a month = total spend that month / total income that month,
-rounded to a whole percent (half up).
+rounded to a whole percent (half up). The same is done per calendar year for YTD.
 
 - Spend: Transactions rows by calendar month of Date, excluding card payments
   ("Payment / Credit"); merchant refunds are negative so they net against spend.
@@ -31,19 +31,32 @@ def monthly_totals(ws, skip_category=None):
     return totals
 
 
+def by_year(totals):
+    years = defaultdict(Decimal)
+    for key, amount in totals.items():
+        years[key[:4]] += amount
+    return years
+
+
+def summarise(spend, income):
+    out = {}
+    for key in sorted(set(spend) | set(income)):
+        s, i = spend.get(key, Decimal(0)), income.get(key, Decimal(0))
+        rate = int((s / i * 100).quantize(Decimal(1), ROUND_HALF_UP)) if i else None
+        out[key] = {"spend": float(s.quantize(Decimal("0.01"))), "income": float(i), "spendRate": rate}
+    return out
+
+
 def main():
     wb = load_workbook(SRC, data_only=True)
     spend = monthly_totals(wb["Transactions"], skip_category="Payment / Credit")
     income = monthly_totals(wb["Income"])
 
-    months = {}
-    for key in sorted(set(spend) | set(income)):
-        s, i = spend.get(key, Decimal(0)), income.get(key, Decimal(0))
-        rate = int((s / i * 100).quantize(Decimal(1), ROUND_HALF_UP)) if i else None
-        months[key] = {"spend": float(s.quantize(Decimal("0.01"))), "income": float(i), "spendRate": rate}
+    months = summarise(spend, income)
+    years = summarise(by_year(spend), by_year(income))
 
-    OUT.write_text(json.dumps({"source": SRC.name, "months": months}, indent=2) + "\n")
-    print(f"Wrote {OUT.relative_to(ROOT)} ({len(months)} months)")
+    OUT.write_text(json.dumps({"source": SRC.name, "months": months, "years": years}, indent=2) + "\n")
+    print(f"Wrote {OUT.relative_to(ROOT)} ({len(months)} months, {len(years)} years)")
 
 
 if __name__ == "__main__":
