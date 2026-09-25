@@ -45,6 +45,17 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .val small{font-size:.55em;font-weight:500;margin-left:1px;}
 .lbl{font-size:clamp(10px,2.2vw,13px);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.2;}
 .note{margin:0;font-size:13px;color:var(--text);}
+.period{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.period-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
+.field{display:flex;flex-direction:column;gap:4px;}
+.field span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--ttm-steel);}
+.field select{appearance:none;-webkit-appearance:none;font:500 16px/1.2 var(--font-mono);color:var(--ink);background-color:var(--logo-tile);
+  border:1px solid var(--rule);border-radius:10px;padding:10px 36px 10px 14px;min-width:120px;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,var(--ttm-steel) 50%),linear-gradient(135deg,var(--ttm-steel) 50%,transparent 50%);
+  background-position:calc(100% - 18px) 55%,calc(100% - 13px) 55%;background-size:5px 5px;background-repeat:no-repeat;}
+.field select:focus-visible{outline:2px solid var(--ttm-blue-bright);outline-offset:2px;}
+.period-range{margin:0;font-size:14px;}
+.period-range b{font-family:var(--font-mono);font-weight:500;color:var(--ink);}
 </style>
 </head>
 <body>
@@ -59,6 +70,13 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     <p class="sub"><b>Know Your Money (KYM)</b> through your spends, investments and savings.</p>
     </div>
   </section>
+  <section class="period" aria-label="Period">
+    <div class="period-controls">
+      <label class="field"><span>Month</span><select id="month"></select></label>
+      <label class="field"><span>Year</span><select id="year"></select></label>
+    </div>
+    <p class="period-range" id="range" aria-live="polite"></p>
+  </section>
   <section class="rates" aria-label="Rates">
     <ul class="bubbles">
       <li class="bubble spend"><span class="val">58<small>%</small></span><span class="lbl">Spend Rate</span></li>
@@ -68,5 +86,29 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     <p class="note">Sample figures · 58% + 24% + 18% = 100%</p>
   </section>
 </div>
+<script>
+(function(){
+  // "Today" is fixed for this design: 27 Dec 2021. Oldest selectable year is 2020.
+  var TODAY=new Date(2021,11,27), MIN_YEAR=2020;
+  var MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var mSel=document.getElementById("month"), ySel=document.getElementById("year"), range=document.getElementById("range");
+  for(var y=TODAY.getFullYear();y>=MIN_YEAR;y--) ySel.add(new Option(y,y));
+  function fillMonths(){
+    var keep=+mSel.value, max=(+ySel.value===TODAY.getFullYear())?TODAY.getMonth():11;
+    mSel.length=0;
+    for(var m=0;m<=max;m++) mSel.add(new Option(MONTHS[m],m));
+    mSel.value=Math.min(isNaN(keep)?max:keep,max);
+  }
+  function update(){
+    var y=+ySel.value, m=+mSel.value, isNow=(y===TODAY.getFullYear()&&m===TODAY.getMonth());
+    var end=isNow?TODAY.getDate():new Date(y,m+1,0).getDate();
+    range.innerHTML="Showing <b>1–"+end+" "+MONTHS[m]+" "+y+"</b>"+(isNow?" · today":"");
+  }
+  ySel.value=TODAY.getFullYear(); fillMonths(); mSel.value=TODAY.getMonth();
+  ySel.addEventListener("change",function(){fillMonths();update();});
+  mSel.addEventListener("change",update);
+  update();
+})();
+</script>
 </body>
 </html>
