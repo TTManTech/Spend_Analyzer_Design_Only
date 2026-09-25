@@ -4,7 +4,7 @@ Spend rate for a month = total spend that month / total income that month,
 rounded to a whole percent (half up). The same is done per calendar year for YTD.
 
 - Spend: Transactions rows by calendar month of Date, excluding card payments
-  ("Payment / Credit"); merchant refunds are negative so they net against spend.
+  (Spend / Income = "Payment"); merchant refunds are negative so they net against spend.
 - Income: Income sheet rows by calendar month of Date.
 
 Run: python3 scripts/build_spend_rates.py   (needs openpyxl)
@@ -21,11 +21,11 @@ SRC = ROOT / "data" / "Master_Data_V0.1.xlsx"
 OUT = ROOT / "data" / "spend-rates.json"
 
 
-def monthly_totals(ws, skip_category=None):
+def monthly_totals(ws, skip_kind=None):
     totals = defaultdict(Decimal)
     rows = ws.iter_rows(min_row=2, values_only=True)
-    for _bank, date, _year, _desc, amount, category, _kind in rows:
-        if date is None or amount is None or category == skip_category:
+    for _bank, date, _year, _desc, amount, _category, kind in rows:
+        if date is None or amount is None or kind == skip_kind:
             continue
         totals[f"{date.year}-{date.month:02d}"] += Decimal(str(amount))
     return totals
@@ -49,7 +49,7 @@ def summarise(spend, income):
 
 def main():
     wb = load_workbook(SRC, data_only=True)
-    spend = monthly_totals(wb["Transactions"], skip_category="Payment / Credit")
+    spend = monthly_totals(wb["Transactions"], skip_kind="Payment")
     income = monthly_totals(wb["Income"])
 
     months = summarise(spend, income)
