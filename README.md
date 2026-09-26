@@ -22,7 +22,7 @@ After changing the spreadsheet, regenerate the data (needs `openpyxl`):
 ```sh
 python3 scripts/build_spend_rates.py
 ```
- The page follows the viewer's light/dark setting and uses the TTM Tech palette and JetBrains Mono (Google Fonts).
+ The page follows the viewer's light/dark setting until they use the Light/Dark switch in the top right corner, which is remembered in that browser and uses the TTM Tech palette and JetBrains Mono (Google Fonts).
 
 ## Run
 
