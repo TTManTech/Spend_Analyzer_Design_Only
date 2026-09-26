@@ -1384,7 +1384,7 @@
           ]
         },
         {
-          "name": "Other",
+          "name": "Services",
           "total": 30.0,
           "share": 6.0,
           "top": [
@@ -3680,32 +3680,32 @@
       "categories": [
         {
           "name": "Other",
-          "total": 4204.29,
-          "share": 55.8,
+          "total": 4174.29,
+          "share": 55.4,
           "top": [
             {
               "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
               "date": "2020-02-04",
               "amount": 1636.37,
-              "share": 38.9
+              "share": 39.2
             },
             {
               "desc": "JENNINGS VOLKSWAGEN INC GLENVIEW IL",
               "date": "2020-10-08",
               "amount": 1368.37,
-              "share": 32.5
+              "share": 32.8
             },
             {
               "desc": "XSPORT NILES 877-417-1450 IL",
               "date": "2020-11-15",
               "amount": 408.0,
-              "share": 9.7
+              "share": 9.8
             },
             {
               "desc": "MILAAP USA WWW.MILAAP.OR TX",
               "date": "2020-03-03",
               "amount": 350.0,
-              "share": 8.3
+              "share": 8.4
             },
             {
               "desc": "TOP GOLF SCHAUMBURG 62-2 SCHAUMBURG IL",
@@ -3951,6 +3951,19 @@
               "date": "2020-02-06",
               "amount": 10.81,
               "share": 4.7
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "total": 30.0,
+          "share": 0.4,
+          "top": [
+            {
+              "desc": "SMART WASH LAUNDRY - NILE NILES IL",
+              "date": "2020-12-05",
+              "amount": 30.0,
+              "share": 100.0
             }
           ]
         },

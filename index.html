@@ -78,10 +78,10 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .period-range{margin:0;font-size:14px;}
 .period-range b{font-family:var(--font-mono);font-weight:500;color:var(--ink);}
 /* Spend by category (donut). Categorical slots validated for CVD with scripts from the dataviz method. */
-.cats{--c1:#2a78d6;--c2:#eb6834;--c3:#1baf7a;--c4:#eda100;--c5:#e87ba4;--c6:#008300;--c7:#4a3aa7;--c8:#e34948;--c-other:#898781;--c-other-ink:#5f5e59;
+.cats{--c1:#2a78d6;--c2:#eb6834;--c3:#1baf7a;--c4:#eda100;--c5:#e87ba4;--c6:#008300;--c7:#4a3aa7;--c8:#e34948;--c-other:#898781;--c-other-ink:#5f5e59;--c-svc-ink:#004d00;
   width:100%;box-sizing:border-box;background:var(--logo-tile);border:1px solid var(--rule);border-radius:16px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:20px;}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cats{--c1:#3987e5;--c2:#d95926;--c3:#199e70;--c4:#c98500;--c5:#d55181;--c6:#008300;--c7:#9085e9;--c8:#e66767;--c-other:#898781;--c-other-ink:#b5b3ac;}}
-:root[data-theme="dark"] .cats{--c1:#3987e5;--c2:#d95926;--c3:#199e70;--c4:#c98500;--c5:#d55181;--c6:#008300;--c7:#9085e9;--c8:#e66767;--c-other:#898781;--c-other-ink:#b5b3ac;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .cats{--c1:#3987e5;--c2:#d95926;--c3:#199e70;--c4:#c98500;--c5:#d55181;--c6:#008300;--c7:#9085e9;--c8:#e66767;--c-other:#898781;--c-other-ink:#b5b3ac;--c-svc-ink:#5cc05c;}}
+:root[data-theme="dark"] .cats{--c1:#3987e5;--c2:#d95926;--c3:#199e70;--c4:#c98500;--c5:#d55181;--c6:#008300;--c7:#9085e9;--c8:#e66767;--c-other:#898781;--c-other-ink:#b5b3ac;--c-svc-ink:#5cc05c;}
 .cats-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;}
 .cats h2{margin:0;font-family:var(--font-mono);font-weight:700;font-size:clamp(18px,3vw,22px);color:var(--ink);}
 .cats-period{margin:0;font-size:14px;}
@@ -107,6 +107,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .legend .amt,.legend .pc{text-align:right;font-variant-numeric:tabular-nums;}
 .legend .pc{color:var(--ttm-steel);}
 .sw-other{background:repeating-linear-gradient(45deg,var(--c-other) 0 3px,var(--c-other-ink) 3px 4.5px);}
+.sw-services{background:repeating-linear-gradient(45deg,var(--c6) 0 3px,var(--c-svc-ink) 3px 4.5px);}
 .top{border-top:1px solid var(--rule);padding-top:16px;}
 .top h3{margin:0 0 10px;font-size:15px;color:var(--ink);display:flex;align-items:center;gap:8px;}
 .top h3 .sw{width:12px;height:12px;border-radius:3px;flex:none;}
@@ -171,6 +172,9 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
             <pattern id="hatch-other" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
               <rect width="6" height="6" fill="var(--c-other)"/><rect width="2" height="6" fill="var(--c-other-ink)"/>
             </pattern>
+            <pattern id="hatch-services" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <rect width="6" height="6" fill="var(--c6)"/><rect width="2" height="6" fill="var(--c-svc-ink)"/>
+            </pattern>
           </defs>
           <g id="slices"></g>
         </svg>
@@ -212,9 +216,11 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 
   // ---- Spend by category donut ----
   // Each category keeps one colour everywhere; slices run in this fixed ring order
-  // (checked for colour-blind separation), with "Other" drawn as a hatched grey.
+  // (checked for colour-blind separation). The palette has eight colours, so "Other" is
+  // hatched grey and "Services" is hatched green (solid green is Home Improvement).
   var CAT_ORDER=["Supermarket / Groceries","Merchandise / Clothing","Restaurant / Fast-food","Gas / Fuel",
-    "Beverages / Bar","Home Improvement","Other","Travel & Hospitality","Pharmacy"];
+    "Beverages / Bar","Home Improvement","Other","Travel & Hospitality","Pharmacy","Services"];
+  var CAT_HATCH={"Other":"other","Services":"services"};
   var CAT_FILL={"Supermarket / Groceries":"var(--c1)","Merchandise / Clothing":"var(--c2)","Restaurant / Fast-food":"var(--c3)",
     "Gas / Fuel":"var(--c4)","Beverages / Bar":"var(--c5)","Home Improvement":"var(--c6)","Travel & Hospitality":"var(--c7)","Pharmacy":"var(--c8)"};
   var usd=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});
@@ -224,9 +230,10 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     svg:document.getElementById("donut"),slices:document.getElementById("slices"),center:document.getElementById("donut-center"),
     tip:document.getElementById("tip"),legend:document.getElementById("legend"),top:document.getElementById("top")};
   var cats=[], selCat=null;
-  function isOther(n){ return !CAT_FILL[n]; }
-  function fillFor(n){ return isOther(n)?"url(#hatch-other)":CAT_FILL[n]; }
-  function swatch(n){ var sp=document.createElement("span"); sp.className="sw"+(isOther(n)?" sw-other":""); if(!isOther(n)) sp.style.background=CAT_FILL[n]; return sp; }
+  // Anything without a colour of its own (a category added later) is drawn like "Other".
+  function hatch(n){ return CAT_HATCH[n]||(CAT_FILL[n]?null:"other"); }
+  function fillFor(n){ var h=hatch(n); return h?"url(#hatch-"+h+")":CAT_FILL[n]; }
+  function swatch(n){ var sp=document.createElement("span"), h=hatch(n); sp.className="sw"+(h?" sw-"+h:""); if(!h) sp.style.background=CAT_FILL[n]; return sp; }
   function rank(n){ var i=CAT_ORDER.indexOf(n); return i<0?CAT_ORDER.indexOf("Other")+.5:i; }
   function pctText(v){ return (v<1&&v>0)?"<1%":Math.round(v)+"%"; }
   function arc(a0,a1,R,r){
