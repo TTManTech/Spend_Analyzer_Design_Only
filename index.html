@@ -47,6 +47,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .val{font-family:var(--font-mono);font-weight:700;font-size:clamp(22px,6vw,44px);line-height:1;font-variant-numeric:tabular-nums;}
 .val small{font-size:.55em;font-weight:500;margin-left:1px;}
 .lbl{font-size:clamp(10px,2.2vw,13px);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.2;}
+.amt-b{font-size:clamp(11px,2.4vw,14px);font-weight:300;opacity:.85;line-height:1.2;font-variant-numeric:tabular-nums;}
 .note{margin:0;font-size:13px;color:var(--text);text-align:center;}
 .period{display:flex;flex-direction:column;align-items:center;gap:8px;}
 .period-controls{display:flex;justify-content:center;align-items:center;gap:clamp(10px,3vw,16px);}
@@ -152,11 +153,11 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
   </section>
   <section class="rates" aria-label="Rates">
     <ul class="bubbles">
-      <li class="bubble spend"><span class="val" id="spend-rate">–<small>%</small></span><span class="lbl">Spend Rate</span></li>
-      <li class="bubble invest"><span class="val">24<small>%</small></span><span class="lbl">Investment Rate</span></li>
-      <li class="bubble save"><span class="val">18<small>%</small></span><span class="lbl">Savings Rate</span></li>
+      <li class="bubble spend"><span class="val" id="spend-rate">–<small>%</small></span><span class="lbl">Spend Rate</span><span class="amt-b" id="spend-amt">(–)</span></li>
+      <li class="bubble invest"><span class="val">24<small>%</small></span><span class="lbl">Investment Rate</span><span class="amt-b" id="invest-amt">(–)</span></li>
+      <li class="bubble save"><span class="val">18<small>%</small></span><span class="lbl">Savings Rate</span><span class="amt-b" id="save-amt">(–)</span></li>
     </ul>
-    <p class="note" id="note">Spend rate = spend ÷ income for the selected month or YTD year · Investment and savings rates are sample figures</p>
+    <p class="note" id="note">Spend rate = spend ÷ income for the selected month or YTD year · Investment and savings rates are sample figures, with amounts based on that period's income</p>
   </section>
   <section class="cats" aria-labelledby="cats-title">
     <div class="cats-head">
@@ -202,9 +203,16 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     range.innerHTML="Showing <b>"+span(m,1,m,end,y)+"</b>"+(isNow?" · today":"");
     setRate(data&&data.months[y+"-"+String(m+1).padStart(2,"0")], MONTHS[m]+" "+y+(isNow?" (to date)":""));
   }
+  var SAMPLE_INVEST=.24, SAMPLE_SAVE=.18;
   function setRate(row,label){
     var rate=row?row.spendRate:null;
     spendRate.firstChild.nodeValue=(rate==null)?"–":rate;
+    // Dollar amounts under each rate. Investment and savings are sample rates, so their
+    // amounts are those sample rates applied to the period's income.
+    var income=row?row.income:0, money=function(v){ return "("+usd0.format(v)+")"; };
+    document.getElementById("spend-amt").textContent=(row&&(row.spend||income))?money(row.spend):"(–)";
+    document.getElementById("invest-amt").textContent=income?money(income*SAMPLE_INVEST):"(–)";
+    document.getElementById("save-amt").textContent=income?money(income*SAMPLE_SAVE):"(–)";
     if(data) renderCats(row,label);
   }
 
