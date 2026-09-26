@@ -191,12 +191,15 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     for(var m=0;m<=max;m++) mSel.add(new Option(MONTHS[m],m));
     mSel.value=Math.min(isNaN(keep)?max:keep,max);
   }
+  // "Jan 1st - Jan 31st 2021"
+  function ordinal(d){ var t=d%100; return d+((t>10&&t<14)?"th":(["th","st","nd","rd"][d%10]||"th")); }
+  function span(m0,d0,m1,d1,y){ return MONTHS[m0]+" "+ordinal(d0)+" - "+MONTHS[m1]+" "+ordinal(d1)+" "+y; }
   function update(){
     if(ytdYear!==null){ showYtd(); return; }
     period.classList.remove("ytd-mode");
     var y=+ySel.value, m=+mSel.value, isNow=(y===TODAY.getFullYear()&&m===TODAY.getMonth());
     var end=isNow?TODAY.getDate():new Date(y,m+1,0).getDate();
-    range.innerHTML="Showing <b>1–"+end+" "+MONTHS[m]+" "+y+"</b>"+(isNow?" · today":"");
+    range.innerHTML="Showing <b>"+span(m,1,m,end,y)+"</b>"+(isNow?" · today":"");
     setRate(data&&data.months[y+"-"+String(m+1).padStart(2,"0")], MONTHS[m]+" "+y+(isNow?" (to date)":""));
   }
   function setRate(row,label){
@@ -332,7 +335,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     ytdBtn.setAttribute("aria-pressed","true"); ytdLabel.textContent=y;
     Array.prototype.forEach.call(ytdList.children,function(b){ b.setAttribute("aria-pressed",String(+b.textContent===y)); });
     if(y>ty){ range.innerHTML="Showing YTD <b>"+y+"</b> · no data yet"; setRate(null,"YTD "+y); return; }
-    range.innerHTML="Showing YTD <b>1 Jan–"+(y===ty?TODAY.getDate()+" "+MONTHS[TODAY.getMonth()]:"31 Dec")+" "+y+"</b>"+(y===ty?" · today":"");
+    range.innerHTML="Showing YTD <b>"+(y===ty?span(0,1,TODAY.getMonth(),TODAY.getDate(),y):span(0,1,11,31,y))+"</b>"+(y===ty?" · today":"");
     var row=data&&data.years[y];
     if(row&&row.spendRate==null) range.innerHTML+=" · no income recorded";
     setRate(row,"YTD "+y);
