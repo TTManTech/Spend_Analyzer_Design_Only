@@ -8,7 +8,10 @@ rounded to a whole percent (half up). The same is done per calendar year for YTD
 - Income: Income sheet rows by calendar month of Date.
 - Categories: each month and year also lists its spend per Category of Spend
   (net of refunds, share of the period's spend) and that category's top 7
-  purchases with each one's share of the category total.
+  purchases with each one's share of the category total. A merchant fills at
+  most 3 of those rows; when it has more than 3 purchases, the ones not listed
+  are summarised under "more" (count and total) so the page can show them as
+  a small bubble.
 
 Run: python3 scripts/build_spend_rates.py   (needs openpyxl)
 """
@@ -35,6 +38,7 @@ def monthly_totals(ws, skip_kind=None):
 
 
 TOP_N = 7
+PER_MERCHANT = 3
 
 
 def spend_rows(ws):
@@ -61,13 +65,27 @@ def category_breakdown(rows):
     for category, total in sorted(totals.items(), key=lambda kv: -kv[1]):
         if total <= 0:
             continue
-        top = sorted(purchases[category], key=lambda p: (-p[0], p[1]))[:TOP_N]
+        ranked = sorted(purchases[category], key=lambda p: (-p[0], p[1]))
+        listed, per_merchant, counts = set(), defaultdict(int), defaultdict(int)
+        for i, p in enumerate(ranked):
+            counts[p[2]] += 1
+            if len(listed) < TOP_N and per_merchant[p[2]] < PER_MERCHANT:
+                listed.add(i)
+                per_merchant[p[2]] += 1
+        top = [p for i, p in enumerate(ranked) if i in listed]
+        more = defaultdict(lambda: [0, Decimal(0)])
+        for i, p in enumerate(ranked):
+            if counts[p[2]] > PER_MERCHANT and i not in listed:
+                more[p[2]][0] += 1
+                more[p[2]][1] += p[0]
         out.append({
             "name": category,
             "total": float(total),
             "share": pct(total, spend),
             "top": [{"desc": d, "date": dt.strftime("%Y-%m-%d"), "amount": float(a), "share": pct(a, total)}
                     for a, dt, d in top],
+            "more": [{"desc": d, "count": n, "amount": float(a), "share": pct(a, total)}
+                     for d, (n, a) in sorted(more.items(), key=lambda kv: -kv[1][1])],
         })
     return out
 
