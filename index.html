@@ -43,16 +43,31 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 .sub b{font-family:var(--font-mono);font-weight:500;color:var(--ttm-green);letter-spacing:.06em;}
 :root[data-theme="dark"] .sub b{color:var(--ink);}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sub b{color:var(--ink);}}
-.rates{width:100%;display:flex;flex-direction:column;align-items:center;gap:16px;}
-.bubbles{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;justify-content:center;gap:clamp(10px,4vw,48px);width:100%;}
-.bubble{flex:0 1 200px;aspect-ratio:1;max-width:200px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-  color:var(--on-fill);box-shadow:0 0 0 clamp(4px,1vw,8px) var(--ring);text-align:center;padding:8px;}
-.spend{background:var(--ttm-blue);} .invest{background:var(--ttm-green);} .save{background:var(--ttm-blue-bright);}
-.val{font-family:var(--font-mono);font-weight:700;font-size:clamp(22px,6vw,44px);line-height:1;font-variant-numeric:tabular-nums;}
-.val small{font-size:.55em;font-weight:500;margin-left:1px;}
-.lbl{font-size:clamp(10px,2.2vw,13px);text-transform:uppercase;letter-spacing:.08em;font-weight:600;line-height:1.2;}
-.amt-b{font-size:clamp(11px,2.4vw,14px);font-weight:300;opacity:.85;line-height:1.2;font-variant-numeric:tabular-nums;}
-.note{margin:0;font-size:13px;color:var(--text);text-align:center;}
+/* Income split: one bar, spend / investment / savings / unallocated. Colours are validated
+   categorical slots (blue, aqua, orange) so the three stay distinct for colour-blind readers. */
+.rates{--k-spend:#2a78d6;--k-invest:#1baf7a;--k-save:#eb6834;--k-rest:#dde1e7;
+  width:100%;box-sizing:border-box;background:var(--logo-tile);border:1px solid var(--rule);border-radius:16px;padding:clamp(20px,4vw,32px);
+  display:flex;flex-direction:column;gap:20px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .rates{--k-spend:#3987e5;--k-invest:#199e70;--k-save:#d95926;--k-rest:#2a3340;}}
+:root[data-theme="dark"] .rates{--k-spend:#3987e5;--k-invest:#199e70;--k-save:#d95926;--k-rest:#2a3340;}
+.rates h2{margin:0;font-family:var(--font-mono);font-weight:700;font-size:clamp(18px,3vw,22px);color:var(--ink);}
+.split-wrap{position:relative;}
+.split{display:flex;gap:2px;height:22px;border-radius:6px;overflow:hidden;}
+.split .seg{height:100%;min-width:0;transition:width .3s;cursor:default;}
+.split .seg[hidden]{display:none;}
+.split.none{background:var(--k-rest);opacity:.6;}
+.s-spend{background:var(--k-spend);} .s-invest{background:var(--k-invest);} .s-save{background:var(--k-save);} .s-rest{background:var(--k-rest);}
+@media (prefers-reduced-motion: reduce){.split .seg{transition:none;}}
+.split-legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+@media (max-width:560px){.split-legend{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.split-legend li{display:flex;flex-direction:column;gap:4px;min-width:0;}
+.split-legend .lbl{display:flex;align-items:center;gap:6px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;color:var(--text);}
+.split-legend .dot{width:10px;height:10px;border-radius:3px;flex:none;}
+.split-legend .val{font-family:var(--font-mono);font-weight:700;font-size:clamp(24px,5vw,34px);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;}
+.split-legend .val small{font-size:.55em;font-weight:500;margin-left:1px;}
+.split-legend .amt-b{font-size:14px;font-weight:300;color:var(--text);font-variant-numeric:tabular-nums;}
+.split-legend .k-rest .val{color:var(--ttm-steel);}
+.note{margin:0;font-size:13px;color:var(--ttm-steel);}
 .topbar{width:100%;display:flex;justify-content:flex-end;margin-bottom:-24px;}
 .theme-toggle{position:relative;display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;cursor:pointer;
   font:600 12px/1 var(--font-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ttm-steel);}
@@ -183,13 +198,21 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     </div>
     <p class="period-range" id="range" aria-live="polite"></p>
   </section>
-  <section class="rates" aria-label="Rates">
-    <ul class="bubbles">
-      <li class="bubble spend"><span class="val" id="spend-rate">–<small>%</small></span><span class="lbl">Spend Rate</span><span class="amt-b" id="spend-amt">(–)</span></li>
-      <li class="bubble invest"><span class="val">24<small>%</small></span><span class="lbl">Investment Rate</span><span class="amt-b" id="invest-amt">(–)</span></li>
-      <li class="bubble save"><span class="val">18<small>%</small></span><span class="lbl">Savings Rate</span><span class="amt-b" id="save-amt">(–)</span></li>
+  <section class="rates" aria-labelledby="rates-title">
+    <h2 id="rates-title">Income split</h2>
+    <div class="split-wrap">
+      <div class="split" id="split" role="img" aria-label="Income split">
+        <span class="seg s-spend" data-k="spend"></span><span class="seg s-invest" data-k="invest"></span><span class="seg s-save" data-k="save"></span><span class="seg s-rest" data-k="rest"></span>
+      </div>
+      <div class="tip" id="split-tip" hidden></div>
+    </div>
+    <ul class="split-legend">
+      <li><span class="lbl"><i class="dot s-spend"></i>Spend Rate</span><span class="val" id="spend-rate">–<small>%</small></span><span class="amt-b" id="spend-amt">(–)</span></li>
+      <li><span class="lbl"><i class="dot s-invest"></i>Investment Rate</span><span class="val" id="invest-rate">–<small>%</small></span><span class="amt-b" id="invest-amt">(–)</span></li>
+      <li><span class="lbl"><i class="dot s-save"></i>Savings Rate</span><span class="val" id="save-rate">–<small>%</small></span><span class="amt-b" id="save-amt">(–)</span></li>
+      <li class="k-rest"><span class="lbl"><i class="dot s-rest"></i>Unallocated</span><span class="val" id="rest-rate">–<small>%</small></span><span class="amt-b" id="rest-amt">(–)</span></li>
     </ul>
-    <p class="note" id="note">Spend rate = spend ÷ income for the selected month or YTD year · Investment and savings rates are sample figures, with amounts based on that period's income</p>
+    <p class="note" id="note">Spend rate = spend ÷ income for the selected month or YTD year · Investment and savings rates are sample figures (24% and 18%), with amounts based on that period's income · Unallocated is the income left over</p>
   </section>
   <section class="cats" aria-labelledby="cats-title">
     <div class="cats-head">
@@ -250,15 +273,34 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     setRate(data&&data.months[y+"-"+String(m+1).padStart(2,"0")], MONTHS[m]+" "+y+(isNow?" (to date)":""));
   }
   var SAMPLE_INVEST=.24, SAMPLE_SAVE=.18;
+  var splitEl=document.getElementById("split"), splitTip=document.getElementById("split-tip");
+  Array.prototype.forEach.call(splitEl.children,function(seg){
+    seg.addEventListener("pointermove",function(e){
+      var box=splitEl.parentNode.getBoundingClientRect();
+      splitTip.textContent=seg.dataset.tip; splitTip.style.left=(e.clientX-box.left)+"px"; splitTip.style.top=(e.clientY-box.top)+"px"; splitTip.hidden=false;
+    });
+    seg.addEventListener("pointerleave",function(){ splitTip.hidden=true; });
+  });
   function setRate(row,label){
     var rate=row?row.spendRate:null;
     spendRate.firstChild.nodeValue=(rate==null)?"–":rate;
-    // Dollar amounts under each rate. Investment and savings are sample rates, so their
-    // amounts are those sample rates applied to the period's income.
-    var income=row?row.income:0, money=function(v){ return "("+usd0.format(v)+")"; };
-    document.getElementById("spend-amt").textContent=(row&&(row.spend||income))?money(row.spend):"(–)";
-    document.getElementById("invest-amt").textContent=income?money(income*SAMPLE_INVEST):"(–)";
-    document.getElementById("save-amt").textContent=income?money(income*SAMPLE_SAVE):"(–)";
+    // Income split bar. Investment and savings are sample rates, so their amounts are those
+    // rates applied to the period's income; whatever is left of 100% is "unallocated".
+    var income=row?row.income:0, hasIncome=income>0;
+    var parts={spend:hasIncome?rate:null, invest:hasIncome?SAMPLE_INVEST*100:null, save:hasIncome?SAMPLE_SAVE*100:null};
+    var used=hasIncome?parts.spend+parts.invest+parts.save:0;
+    parts.rest=hasIncome?Math.max(0,100-used):null;
+    var amounts={spend:row?row.spend:null, invest:income*SAMPLE_INVEST, save:income*SAMPLE_SAVE, rest:income*(parts.rest||0)/100};
+    var scale=Math.max(100,used), names={spend:"Spend",invest:"Investment",save:"Savings",rest:"Unallocated"};
+    ["spend","invest","save","rest"].forEach(function(k){
+      var v=parts[k], seg=splitEl.querySelector('[data-k="'+k+'"]');
+      if(k!=="spend") document.getElementById(k+"-rate").firstChild.nodeValue=(v==null)?"–":Math.round(v);
+      document.getElementById(k+"-amt").textContent=(v==null&&!(k==="spend"&&row&&row.spend))?"(–)":"("+usd0.format(amounts[k]||0)+")";
+      seg.hidden=!v; seg.style.width=(v?v/scale*100:0)+"%";
+      seg.dataset.tip=names[k]+" · "+(v==null?"–":Math.round(v)+"%")+" · "+usd0.format(amounts[k]||0);
+    });
+    splitEl.classList.toggle("none",!hasIncome);
+    splitEl.setAttribute("aria-label",hasIncome?"Income split: "+["spend","invest","save","rest"].map(function(k){return names[k]+" "+Math.round(parts[k])+"%";}).join(", "):"Income split: no income recorded for this period");
     if(data) renderCats(row,label);
   }
 
