@@ -6,6 +6,9 @@ rounded to a whole percent (half up). The same is done per calendar year for YTD
 - Spend: Transactions rows by calendar month of Date, excluding card payments
   (Spend / Income = "Payment"); merchant refunds are negative so they net against spend.
 - Income: Income sheet rows by calendar month of Date.
+- Categories: each month and year also lists its spend per Category of Spend
+  (net of refunds, share of the period's spend) and that category's top 7
+  purchases with each one's share of the category total.
 
 Run: python3 scripts/build_spend_rates.py   (needs openpyxl)
 """
@@ -31,6 +34,44 @@ def monthly_totals(ws, skip_kind=None):
     return totals
 
 
+TOP_N = 7
+
+
+def spend_rows(ws):
+    rows = ws.iter_rows(min_row=2, values_only=True)
+    for _bank, date, _year, desc, amount, category, kind in rows:
+        if date is None or amount is None or kind == "Payment":
+            continue
+        yield date, desc, Decimal(str(amount)), category
+
+
+def pct(part, whole):
+    return float((part / whole * 100).quantize(Decimal("0.1"), ROUND_HALF_UP))
+
+
+def category_breakdown(rows):
+    """rows: (date, desc, amount, category) for one period."""
+    totals, purchases = defaultdict(Decimal), defaultdict(list)
+    for date, desc, amount, category in rows:
+        totals[category] += amount
+        if amount > 0:
+            purchases[category].append((amount, date, desc))
+    spend = sum((t for t in totals.values() if t > 0), Decimal(0))
+    out = []
+    for category, total in sorted(totals.items(), key=lambda kv: -kv[1]):
+        if total <= 0:
+            continue
+        top = sorted(purchases[category], key=lambda p: (-p[0], p[1]))[:TOP_N]
+        out.append({
+            "name": category,
+            "total": float(total),
+            "share": pct(total, spend),
+            "top": [{"desc": d, "date": dt.strftime("%Y-%m-%d"), "amount": float(a), "share": pct(a, total)}
+                    for a, dt, d in top],
+        })
+    return out
+
+
 def by_year(totals):
     years = defaultdict(Decimal)
     for key, amount in totals.items():
@@ -54,6 +95,13 @@ def main():
 
     months = summarise(spend, income)
     years = summarise(by_year(spend), by_year(income))
+
+    periods = defaultdict(list)
+    for row in spend_rows(wb["Transactions"]):
+        periods[f"{row[0].year}-{row[0].month:02d}"].append(row)
+        periods[str(row[0].year)].append(row)
+    for key, entry in list(months.items()) + list(years.items()):
+        entry["categories"] = category_breakdown(periods.get(key, []))
 
     OUT.write_text(json.dumps({"source": SRC.name, "months": months, "years": years}, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(months)} months, {len(years)} years)")
