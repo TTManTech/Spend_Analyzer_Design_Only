@@ -52,14 +52,12 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
 :root[data-theme="dark"] .rates{--k-spend:#3987e5;--k-invest:#199e70;--k-save:#d95926;--k-rest:#2a3340;}
 .rates h2{margin:0;font-family:var(--font-mono);font-weight:700;font-size:clamp(18px,3vw,22px);color:var(--ink);}
 .split-wrap{position:relative;}
-.split{display:flex;gap:2px;height:38px;border-radius:6px;overflow:hidden;}
-.split .seg{height:100%;min-width:0;cursor:default;display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:0 6px;}
-.split .seg b{display:inline-block;font:700 14px/1 var(--font-mono);white-space:nowrap;font-variant-numeric:tabular-nums;}
-.split .seg b span{font:400 12px/1 var(--font-sans);margin-left:6px;}
-.split .seg b.hide{visibility:hidden;}
+.split{display:flex;gap:2px;height:22px;border-radius:6px;overflow:hidden;}
+.split .seg{height:100%;min-width:0;transition:width .3s;cursor:default;}
 .split .seg[hidden]{display:none;}
 .split.none{background:var(--k-rest);opacity:.6;}
 .s-spend{background:var(--k-spend);} .s-invest{background:var(--k-invest);} .s-save{background:var(--k-save);} .s-rest{background:var(--k-rest);}
+@media (prefers-reduced-motion: reduce){.split .seg{transition:none;}}
 .split-legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
 @media (max-width:560px){.split-legend{grid-template-columns:repeat(2,minmax(0,1fr));}}
 .split-legend li{display:flex;flex-direction:column;gap:4px;min-width:0;}
@@ -204,7 +202,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
     <h2 id="rates-title">Income split</h2>
     <div class="split-wrap">
       <div class="split" id="split" role="img" aria-label="Income split">
-        <span class="seg s-spend" data-k="spend"><b></b></span><span class="seg s-invest" data-k="invest"><b></b></span><span class="seg s-save" data-k="save"><b></b></span><span class="seg s-rest" data-k="rest"><b></b></span>
+        <span class="seg s-spend" data-k="spend"></span><span class="seg s-invest" data-k="invest"></span><span class="seg s-save" data-k="save"></span><span class="seg s-rest" data-k="rest"></span>
       </div>
       <div class="tip" id="split-tip" hidden></div>
     </div>
@@ -276,27 +274,6 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
   }
   var SAMPLE_INVEST=.24, SAMPLE_SAVE=.18;
   var splitEl=document.getElementById("split"), splitTip=document.getElementById("split-tip");
-  // Numbers inside the bar: "24% $1,200" when it fits, else just "24%", else nothing (the
-  // legend below and the hover tip still carry it). Text colour is white or ink, whichever
-  // contrasts better with the section's fill.
-  function lum(rgb){ var c=rgb.match(/\d+/g).slice(0,3).map(function(v){ v/=255; return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4); }); return .2126*c[0]+.7152*c[1]+.0722*c[2]; }
-  function fitSplitLabels(){
-    Array.prototype.forEach.call(splitEl.children,function(seg){
-      var b=seg.firstChild; b.className=""; b.textContent="";
-      if(seg.hidden||!seg.dataset.pct) return;
-      var L=lum(getComputedStyle(seg).backgroundColor);
-      b.style.color=(1.05/(L+.05) >= (L+.05)/(0.0033+.05)) ? "#fff" : "#0b0b0b"; // vs ink #0b0b0b
-      var room=seg.clientWidth-12;
-      b.textContent=seg.dataset.pct; var amt=document.createElement("span"); amt.textContent=seg.dataset.amt; b.appendChild(amt);
-      if(b.scrollWidth<=room) return;
-      b.removeChild(amt);
-      if(b.scrollWidth>room) b.className="hide";
-    });
-  }
-  window.addEventListener("resize",fitSplitLabels);
-  // Fills change with the theme, so re-pick label colours when it does.
-  new MutationObserver(fitSplitLabels).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
-  if(window.matchMedia){ var mqd=window.matchMedia("(prefers-color-scheme: dark)"); if(mqd.addEventListener) mqd.addEventListener("change",fitSplitLabels); }
   Array.prototype.forEach.call(splitEl.children,function(seg){
     seg.addEventListener("pointermove",function(e){
       var box=splitEl.parentNode.getBoundingClientRect();
@@ -321,9 +298,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
       document.getElementById(k+"-amt").textContent=(v==null&&!(k==="spend"&&row&&row.spend))?"(–)":"("+usd0.format(amounts[k]||0)+")";
       seg.hidden=!v; seg.style.width=(v?v/scale*100:0)+"%";
       seg.dataset.tip=names[k]+" · "+(v==null?"–":Math.round(v)+"%")+" · "+usd0.format(amounts[k]||0);
-      seg.dataset.pct=v==null?"":Math.round(v)+"%"; seg.dataset.amt=usd0.format(amounts[k]||0);
     });
-    fitSplitLabels();
     splitEl.classList.toggle("none",!hasIncome);
     splitEl.setAttribute("aria-label",hasIncome?"Income split: "+["spend","invest","save","rest"].map(function(k){return names[k]+" "+Math.round(parts[k])+"%";}).join(", "):"Income split: no income recorded for this period");
     if(data) renderCats(row,label);
