@@ -205,6 +205,7 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
       </div>
     </div>
     <p class="period-range" id="range" aria-live="polite"></p>
+    <p class="period-range" id="data-status" role="status" hidden></p>
   </section>
   <section class="rates" aria-labelledby="rates-title">
     <h2 id="rates-title">Income split</h2>
@@ -518,9 +519,23 @@ h1{margin:0;font-family:var(--font-mono);font-weight:700;color:var(--ink);font-s
   document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&!ytdPop.hidden) closePop(true); });
   // Monthly spend rates are precomputed from the master spreadsheet by scripts/build_spend_rates.py.
   var data=null, spendRate=document.getElementById("spend-rate");
-  fetch("data/spend-rates.json").then(function(r){return r.json();})
-    .then(function(j){data=j;update();})
-    .catch(function(){});
+  // Figures live in this artifact's database (collections "months" and "years", one
+  // document per period, loaded from the spreadsheet by scripts/build_spend_rates.py);
+  // nothing personal is shipped in the page itself.
+  var status=document.getElementById("data-status");
+  function setStatus(t){ status.textContent=t||""; status.hidden=!t; }
+  setStatus("Loading figures…");
+  (window.claude?window.claude.use("db"):Promise.resolve(null)).then(function(db){
+    if(!db){ setStatus("Figures are only available when this page is opened on claude.ai while signed in."); return; }
+    var got={months:null,years:null};
+    ["months","years"].forEach(function(coll){
+      db.collection(coll).onSnapshot(function(snap){
+        var m={}; snap.docs.forEach(function(d){ m[d.id]=d.data(); });
+        got[coll]=m;
+        if(got.months&&got.years){ data={months:got.months,years:got.years}; setStatus(snap.empty&&coll==="months"?"No figures loaded yet.":""); update(); }
+      },function(){ setStatus("Couldn't load the figures. Reload the page to try again."); });
+    });
+  });
   ySel.value=TODAY.getFullYear(); fillMonths(); mSel.value=TODAY.getMonth();
   ySel.addEventListener("change",function(){clearYtd();fillMonths();update();});
   mSel.addEventListener("change",function(){clearYtd();update();});
