@@ -1,0 +1,3 @@
+# Personal financial data stays out of git: the spreadsheet is kept locally and the
+# figures live in the published artifact's database.
+data/
